@@ -1,0 +1,31 @@
+---
+title: Datasets
+description: All the datasets
+---
+
+
+div id="datasets-page"
+  section.sec.banner
+    div.container
+      h1.title Datasets
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sapiente quaerat ipsa labore reiciendis soluta, asperiores modi praesentium, ducimus vero co
+
+  section.sec
+    div.container
+      table.data-table.table-striped.lefty
+        thead
+          tr
+            th Name
+            th Topic
+            th Jurisdiction
+            th Size
+        tbody
+          - config[:flattened_datasets].each do |dataset|
+            tr
+              td
+                div.name => link_to dataset.title, dataset.url
+                div.description => dataset.deck
+              td => dataset.primary_topic
+              td => dataset.jurisdiction
+              td => dataset.data_size
+

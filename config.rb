@@ -4,7 +4,7 @@ require 'lib/ddcd'
 activate :i18n, :mount_at_root => :en
 activate :livereload
 activate :directory_indexes
-set :relative_links, true
+#set :relative_links, true
 activate :relative_assets
 
 set :trailing_slash, true
@@ -48,7 +48,7 @@ end
 
 
 activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'revs-landing-beta' # The name of the S3 bucket you are targetting. This is globally unique.
+  s3_sync.bucket                     = 'ddcs-data-beta' # The name of the S3 bucket you are targetting. This is globally unique.
   s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
   s3_sync.delete                     = false # We delete stray files by default.
   s3_sync.after_build                = true # We do not chain after the build step by default.
@@ -63,18 +63,20 @@ end
 
 ready do
   ## flatten the datasets
-  ft = data.datasets.inject(Hashie::Mash.new) do |hsh, (folder, fnames)|
-    hsh.merge!(fnames)
+  ft = data.datasets.inject([]) do |arr, (folder, fnames)|
+    fnames.each_pair do |slug, obj|
+      obj[:slug] = slug
+      arr << DDCD::Dataset.new(obj)
+    end
 
-    hsh
+    arr
   end
+
+  ft.each do |dataset|
+    proxy dataset.url, '/templates/dataset.html', locals: {dataset: dataset}
+  end
+
+
   set :flattened_datasets, ft
-
-
-  config[:flattened_datasets].each_pair do |slug, obj|
-    dataset = DDCD::Dataset.new(obj)
-    puts "Title: #{dataset.title}"
-    proxy "/datasets/#{slug}", '/templates/dataset.html', locals: {dataset: dataset}
-  end
 
 end
