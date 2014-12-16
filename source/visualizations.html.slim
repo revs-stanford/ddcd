@@ -11,3 +11,14 @@ div id="visualizations-page"
     div.container
       h1.title Visualizations
       p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sapiente quaerat ipsa labore reiciendis soluta, asperiores modi praesentium, ducimus vero co
+
+  section.sec.visualizations
+    div.container
+      div.row
+        - config[:all_visualizations].each do |v|
+          div.col-sm-4
+            div.visualization.box
+            div.imgwrap
+              => image_tag v.image_url
+
+            div.title => link_to v.title, v.url

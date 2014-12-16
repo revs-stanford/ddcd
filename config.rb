@@ -5,7 +5,7 @@ activate :i18n, :mount_at_root => :en
 activate :livereload
 activate :directory_indexes
 #set :relative_links, true
-activate :relative_assets
+#activate :relative_assets
 
 set :trailing_slash, true
 set :markdown_engine, :kramdown
@@ -62,21 +62,33 @@ end
 
 
 ready do
+  vizzes = []
   ## flatten the datasets
   ft = data.datasets.inject([]) do |arr, (folder, fnames)|
     fnames.each_pair do |slug, obj|
       obj[:slug] = slug
-      arr << DDCD::Dataset.new(obj)
+      d = DDCD::Dataset.new(obj)
+      vizzes.concat d.visualizations
+
+      arr << d
     end
 
     arr
   end
 
+
+
   ft.each do |dataset|
     proxy dataset.url, '/templates/dataset.html', locals: {dataset: dataset}
   end
 
+  vizzes.each do |viz|
+    if viz.native?
+      proxy viz.url, '/templates/viz.html', locals: {viz: viz}
+    end
+  end
 
-  set :flattened_datasets, ft
+  set :all_datasets, ft
+  set :all_visualizations, vizzes
 
 end

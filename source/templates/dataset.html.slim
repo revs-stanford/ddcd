@@ -17,6 +17,19 @@
               span => link_to dataset.source_name, dataset.source_url
 
 
+    - if dataset.visualizations?
+      section.sec.visualizations
+        div.container
+          div.row
+            - dataset.visualizations.each do |v|
+              div.col-sm-4
+                div.visualization.box
+                div.imgwrap
+                  => image_tag v.image_url
+
+                div.title => link_to v.title, v.url
+
+
     - if dataset.fields
       section.sec.data-fields
         div.container

@@ -2,7 +2,7 @@ require 'hashie'
 require 'andand'
 module DDCD
   class Visualization
-    attr_reader :title, :slug, :dataset, :image_url
+    attr_reader :title, :slug, :dataset, :source, :description
     def initialize(obj)
       h = Hashie::Mash.new obj
       @title = h.title
@@ -10,10 +10,20 @@ module DDCD
       @dataset = h.dataset
       @image_url = h.image_url
       @source = h.source
+      @description = h.description
+
+      @_content_url = h.content_url
+      @_image_url = h.image_url
     end
+
+    alias_method :name, :title
 
     def url
       external? ? source.url : "/visualizations/#{slug}"
+    end
+
+    def content_url
+      @_content_url || "/visualizations/content/#{slug}.html"
     end
 
     def dataset_name
@@ -37,19 +47,18 @@ module DDCD
       !@source.nil?
     end
 
+    def native?
+      !external?
+    end
+
     def image_url
-      u = URI.parse(@image_url)
+      u = URI.parse(@_image_url)
       if u.absolute?
         image_url
       else
-        URI.join( "/visualizations/images/", u).to_s
+        Pathname.new( "/visualizations/images/").join( u.to_s)
       end
     end
 
-
-    ### description stuff
-    def deck
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ad, incidunt numquam voluptas, nesciunt dolorum illum, aperiam molestias consequuntur qui amet! Laboriosam facilis perspiciatis suscipit fugiat consequatur est, ex, animi?"
-    end
   end
 end

@@ -22,7 +22,7 @@ div id="datasets-page"
             th Jurisdiction
             th Size
         tbody
-          - config[:flattened_datasets].each do |dataset|
+          - config[:all_datasets].each do |dataset|
             tr
               td
                 div.name => link_to dataset.title, dataset.url

@@ -2,7 +2,8 @@ require 'hashie'
 require 'andand'
 module DDCD
   class Dataset
-    attr_reader :title, :slug, :categories, :descriptions, :source, :fields
+    attr_reader :title, :slug, :categories, :descriptions, :source,
+      :fields, :visualizations
     def initialize(obj)
       h = Hashie::Mash.new obj
       @title = h.title
@@ -11,6 +12,7 @@ module DDCD
       @descriptions = h.descriptions || {}
       @source = h.source
       @fields = h.data_fields
+      @visualizations = init_vizzes( h.visualizations )
     end
 
     def url
@@ -53,7 +55,19 @@ module DDCD
     def primary_topic
       topical_categories.andand.first
     end
+
+    ############# visualization stuff
+    def visualizations?
+      !visualizations.empty?
+    end
+
+    private
+        def init_vizzes(viz_arr)
+          Array(viz_arr).map do |v|
+
+            DDCD::Visualization.new v.merge(dataset: self)
+          end
+        end
+    ### end privates
   end
-
-
 end

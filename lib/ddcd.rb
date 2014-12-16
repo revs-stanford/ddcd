@@ -3,4 +3,5 @@ module DDCD
 
 end
 
-require_relative 'ddcd/dataset.rb'
+require'lib/ddcd/dataset.rb'
+require'lib/ddcd/visualization.rb'

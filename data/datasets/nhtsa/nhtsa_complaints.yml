@@ -27,6 +27,20 @@ visualizations:
     description: |
       General Motors is recalling more than 1.6 million vehicles because of defective ignition switches in six different models. The cars had problems for ten years and were ultimately linked to 31 accidents and 13 deaths before the recall. During that time, drivers logged complaints to the National Highway Traffic Safety Administration, but the federal agency responded that an investigation was not necessary.
 
+  - title: Pipe fuselage gas escape (Lorem)
+    slug: ocks-streamgraph
+    image_url: 'ocks-streamgraph.png'
+    description: |
+      Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/4060954
+
+  - title: Widgets Complained about Monthly (Lorem)
+    slug: ocks-stacked-to-group
+    image_url: 'ocks-stacked-to-group.png'
+    description: |
+      Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/3943967
+
+
+
 data_fields:
   - name: CMPLID
     type: CHAR(9)

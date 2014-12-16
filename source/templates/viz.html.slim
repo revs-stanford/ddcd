@@ -1,0 +1,28 @@
+/ this keeps trying to be built as a page for some reason
+/ todo: fix this hack
+- if defined?(viz)
+
+  / TODO: Be able to custom define the libraries to load up
+  = javascript_include_tag 'viz'
+
+  div#visualization-page
+    section.sec
+      div.container
+        h5 => link_to 'Visualization', '/visualizations'
+        h2 => viz.name
+
+        div.meta
+          div.source
+            div.name
+              ' From the
+              span => link_to viz.dataset_name, viz.dataset_url
+              ' dataset
+
+    section.visualization
+      div.container
+        div.description => viz.description
+      / TODO: Make container optional?
+      div.container
+        div#viz-content
+
+        div => partial "#{viz.content_url}"
