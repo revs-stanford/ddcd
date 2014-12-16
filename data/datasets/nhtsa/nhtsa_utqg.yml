@@ -14,16 +14,30 @@ description:
     This generates a traction force to oppose the motion of the vehicle. As braking torque increases, the tire deforms more and tread elements near the rear of the contact patch with the road begin to slip rather than grip. The coefficient of friction rapidly reaches a maximum value at about 10-20 percent slip, and then declines as the longitudinal slip values increase to 100 percent, which represents a fully locked tire. The maximum coefficient of friction in the 0-100 percent slip range is termed “peak” coefficient of friction, and the lower coefficient value for the fully locked tire is termed “slide” coefficient of friction. [1]
 
 
+visualizations:
+  - title: "ProPublica Tire Tracker"
+    image_url: propublica-tire-tracker.png
+    description: This project was built during a two-day hackathon by the 2014 Knight-Mozilla OpenNews fellowship class and news application developers from ProPublica.
+    source:
+      url: http://projects.propublica.org/tires/
+      name: ProPublica
 
 
-categories:
-  topical:
-    - Safety
-    - Components
-  size:
-    - Large
-  geography:
-    - U.S.
+
+tags:
+  - Safety
+  - Components
+  - Large
+  - U.S.
+
+# categories:
+#   topical:
+#     - Safety
+#     - Components
+#   size:
+#     - Large
+#   geography:
+#     - U.S.
 
 
 supplements:

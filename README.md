@@ -26,3 +26,15 @@ A listing of all subcategories
 
 
 
+
+------------
+
+### Dataset page
+
+- Title
+- Overview description
+- Visualization examples, if any
+- Data field descriptors, if any
+- Download/access type:
+  + Direct link to official site
+  + Cached copy

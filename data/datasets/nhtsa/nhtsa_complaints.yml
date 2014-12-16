@@ -3,20 +3,35 @@ source:
   url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
   name: National Highway Traffic Safety Administration
 
-categories:
-  topical:
-    - Safety
-  size:
-    - Large
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Safety
+#   size:
+#     - Large
+#   geography:
+#     - U.S.
+
+tags:
+  - Safety
+  - Large
+  - U.S.
+
 
 supplements:
   - title: Auto Regulators Dismissed Defect Tied to 13 Deaths
-    url: http://www.nytimes.com/2014/03/09/business/auto-regulators-dismissed-defect-tied-to-13-deaths.html?_r=0
+    source:
+      url: http://www.nytimes.com/2014/03/09/business/auto-regulators-dismissed-defect-tied-to-13-deaths.html?_r=0
+      name: New York Times
     date: 2014-03-08
     description: |
       Federal safety regulators received more than 260 complaints over the last 11 years about General Motors vehicles that suddenly turned off while being driven, but they declined to investigate the problem, which G.M. now says is linked to 13 deaths and requires the recall of more than 1.6 million cars worldwide.
+  - title: Vehicle Complaint Database
+    description: |
+        The U.S. government's National Highway Traffic Safety Administration (NHTSA) allows the public to file complaints about vehicles and transportation-related equipment. Complaints can be submitted by phone, fax, mail or online and are typically reported by consumers and attorneys. The complaints are monitored by NHTSA's Office of Defects Investigation, which looks for trends and, in some cases, orders investigations. Here are complaints about vehicles filed with NHTSA since Jan. 1, 2010. This list is updated daily, and the data are reprinted "as is" from the filings. Search by manufacturer and model and sort by model year, date filed and date of claimed incident.
+
+    source:
+      url: http://projects.latimes.com/nhtsa/
+      name: Los Angeles Times
 
 visualizations:
   - title: Reconstructing a Recall
@@ -39,7 +54,22 @@ visualizations:
     description: |
       Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/3943967
 
+  - title: Ocks Lorem HExabins
+    slug: ocks-dynamic-hexabin
+    image_url: 'ocks-dynamic-hexabin.png'
+    description: |
+      Hexabin from ocks org http://bl.ocks.org/mbostock/7833311
 
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, impedit deleniti quod et similique voluptate quos eius, provident blanditiis, omnis, maiores id quo rerum numquam at architecto aspernatur consequuntur odit.
+
+
+  - title: Ocks Lorem Quicksort
+    slug: ocks-quicksort
+    image_url: 'ocks-quicksort.png'
+    description: |
+      Hexabin from ocks org http://bl.ocks.org/mbostock/eb3bf12a9d02d78480c2
+
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, impedit deleniti quod et similique voluptate quos eius, provident blanditiis, omnis, maiores id quo rerum numquam at architecto aspernatur consequuntur odit.
 
 data_fields:
   - name: CMPLID

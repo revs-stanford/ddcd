@@ -27,7 +27,7 @@ div id="datasets-page"
               td
                 div.name => link_to dataset.title, dataset.url
                 div.description => dataset.deck
-              td => dataset.primary_topic
-              td => dataset.jurisdiction
-              td => dataset.data_size
+              td => link_to_tag dataset.primary_topic
+              td => link_to_tag dataset.jurisdiction
+              td => link_to_tag dataset.data_size
 

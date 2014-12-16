@@ -3,12 +3,24 @@ source:
   url: http://www.nhtsa.gov/FARS
   name: National Highway Traffic Safety Administration
 
-categories:
-  topical:
-    - Safety
-    - Geolocation
-  size:
-    - Huge
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Safety
+#     - Geolocation
+#   size:
+#     - Huge
+#   geography:
+#     - U.S.
 
+tags:
+  - Safety
+  - Geolocation
+  - Huge
+  - U.S.
+
+visualizations:
+  - title: Arc of Ocks
+    image_url: "ocks-arc.png"
+    slug: ocks-arc
+    description: |
+      Some text courtesy Mike Bostock http://bl.ocks.org/mbostock/aff9e559c5c9968b7ac6

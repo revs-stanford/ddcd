@@ -3,16 +3,19 @@ require 'andand'
 module DDCD
   class Dataset
     attr_reader :title, :slug, :categories, :descriptions, :source,
-      :fields, :visualizations
+      :fields, :visualizations, :tags, :supplements
+    attr_accessor :categories
     def initialize(obj)
       h = Hashie::Mash.new obj
       @title = h.title
       @slug = h.slug
-      @categories = h.categories
+      @categories = {}
+      @tags = h.tags
       @descriptions = h.descriptions || {}
       @source = h.source
       @fields = h.data_fields
       @visualizations = init_vizzes( h.visualizations )
+      @supplements = h.supplements || []
     end
 
     def url
@@ -41,15 +44,15 @@ module DDCD
 
     ## category stuff
     def data_size
-      categories[:size].andand.first
+      categories['Data Size'].andand.first
     end
 
     def jurisdiction
-      categories.geography.andand.first
+      categories['Jurisdiction'].andand.first
     end
 
     def topical_categories
-      categories.topical
+      categories['Topical']
     end
 
     def primary_topic
@@ -59,6 +62,10 @@ module DDCD
     ############# visualization stuff
     def visualizations?
       !visualizations.empty?
+    end
+
+    def supplements?
+      !supplements.empty?
     end
 
     private

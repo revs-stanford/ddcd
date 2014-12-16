@@ -12,11 +12,15 @@ descriptions:
     Contains two sets Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia in nam libero ab nesciunt non magni aliquam, sapiente maiores. Earum est soluta, dicta voluptatibus accusamus asperiores expedita similique nisi.
 
 
-categories:
-  topical:
-    - Safety
-  size:
-    - Large
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Safety
+#   size:
+#     - Large
+#   geography:
+#     - U.S.
 
+tags:
+  - Safety
+  - Large
+  - U.S.

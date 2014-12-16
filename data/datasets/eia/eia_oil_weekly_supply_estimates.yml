@@ -3,15 +3,36 @@ source:
   url: http://www.eia.gov/dnav/pet/pet_sum_sndw_dcus_nus_w.htm
   name: U.S. Energy Information Agency
 
-categories:
-  topical:
-    - Environment
-    - Fuel
-  size:
-    - Medium
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Environment
+#     - Fuel
+#   size:
+#     - Medium
+#   geography:
+#     - U.S.
 
+tags:
+  - Fuel
+  - Environment
+  - Huge
+  - U.S.
+visualizations:
+  - title: Oil by Bostock charty (Lorem)
+    slug: ocks-multi-series-chart
+    image_url: ocks-multi-series-chart.png
+    description: |
+      Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/3884955
+  - title: Oil Balls by Bostock D3 (Lorem)
+    slug: ocks-force-balls
+    image_url: ocks-force-balls.png
+    description: |
+      Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/3884955
+  - title: Oil Red Splotches by Bostock
+    slug: ocks-red-balls-us
+    image_url: ocks-red-balls-us.png
+    description: |
+      Placeholder data visualization courtesy of Mike Bostock and D3: http://bl.ocks.org/mbostock/3884955
 
 # Downloads: Has excel files
 

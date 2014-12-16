@@ -19,6 +19,6 @@ div id="visualizations-page"
           div.col-sm-4
             div.visualization.box
             div.imgwrap
-              => image_tag v.image_url
+              => link_to image_tag( v.image_url), v.url
 
             div.title => link_to v.title, v.url

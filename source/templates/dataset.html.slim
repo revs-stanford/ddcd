@@ -9,6 +9,12 @@
         h2 => dataset.title
         div.deck
           p => dataset.deck
+        div.categories
+          ul
+            - dataset.categories.each_pair do |k, vals|
+              - vals.each do |v|
+                li => "#{k}: #{v}"
+
 
         div.meta
           div.source
@@ -29,6 +35,18 @@
 
                 div.title => link_to v.title, v.url
 
+    - if dataset.supplements?
+      section.sec.supplements
+        div.container
+          h3 Related stories and resources
+          - dataset.supplements.each do |s|
+            div.supplement
+              h4
+                span.name => s[:source][:name]
+                ':
+                span.title => link_to s.title, s[:source][:url]
+              p.description => s.description
+
 
     - if dataset.fields
       section.sec.data-fields
@@ -47,3 +65,6 @@
                   td => f[:name]
                   td => f[:type]
                   td => f[:description]
+
+
+

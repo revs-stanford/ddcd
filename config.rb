@@ -62,12 +62,15 @@ end
 
 
 ready do
+
+  categorizer = DDCD::Categorizer.new(data.categories)
   vizzes = []
   ## flatten the datasets
   ft = data.datasets.inject([]) do |arr, (folder, fnames)|
     fnames.each_pair do |slug, obj|
       obj[:slug] = slug
       d = DDCD::Dataset.new(obj)
+      d.categories = categorizer.organize_tags(d.tags)
       vizzes.concat d.visualizations
 
       arr << d
@@ -76,7 +79,12 @@ ready do
     arr
   end
 
-
+  # hacky
+  categorizer.index_tagged_items(ft)
+  categorizer.tags.each do |tag|
+    # TODO: come up with proper tag slug/model
+    proxy tag_path(tag), '/templates/tag.html', locals: {tag: tag, datasets: categorizer.items_tagged_as(tag)}
+  end
 
   ft.each do |dataset|
     proxy dataset.url, '/templates/dataset.html', locals: {dataset: dataset}
@@ -90,5 +98,6 @@ ready do
 
   set :all_datasets, ft
   set :all_visualizations, vizzes
+  set :categorizer, categorizer
 
 end

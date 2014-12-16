@@ -1,11 +1,15 @@
 body{
-  padding-top: 40px;
+
 }
 
 header.woz{
+  border-bottom: thin solid $brand-primary;
+
   .navbar{
     font-size: 14px;
     line-height: 1.0em;
+    margin-bottom: 16px;
+    margin-top: 16px;
   }
 
   .submenus{

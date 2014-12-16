@@ -3,13 +3,18 @@ source:
   url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
   name: National Highway Traffic Safety Administration
 
-categories:
-  topical:
-    - Safety
-  size:
-    - Medium
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Safety
+#   size:
+#     - Medium
+#   geography:
+#     - U.S.
+
+tags:
+  - Safety
+  - Medium
+  - U.S.
 
 data_fields:
   - name: BULNO

@@ -3,21 +3,12 @@ source:
   url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
   name: National Highway Traffic Safety Administration
 
-categories:
-  topical:
-    - Safety
-  size:
-    - Large
-  geography:
-    - U.S.
 
-# visualizations:
-#   - name: Hello World
-#     dependencies:
-#       vendor:
-#         - 'd3.js'
-#       data:
-#         - 'stuff.json'
+tags:
+  - Safety
+  - Large
+  - U.S.
+
 
 data_fields:
   - name: NHTSA ACTION NUMBER

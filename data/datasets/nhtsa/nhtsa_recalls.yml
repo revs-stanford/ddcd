@@ -12,13 +12,18 @@ description:
 
 
 
-categories:
-  topical:
-    - Safety
-  size:
-    - Medium
-  geography:
-    - U.S.
+# categories:
+#   topical:
+#     - Safety
+#   size:
+#     - Medium
+#   geography:
+#     - U.S.
+
+tags:
+  - Safety
+  - Medium
+  - U.S.
 
 
 downloads:

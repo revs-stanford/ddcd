@@ -4,7 +4,6 @@ body.woz{
   font-size: $font-size-base;
   line-height: 1.65em;
   letter-spacing: 0.02rem;
-  padding-top: 50px;
   position: relative;
   height: 100%;
   code{
@@ -19,6 +18,10 @@ div.imgwrap{
   border: thin solid #aaa;
 }
 
+// todohack
+.accent{
+  color: $brand-primary;
+}
 
 h1,h2,h3{
   font-weight: bold;
