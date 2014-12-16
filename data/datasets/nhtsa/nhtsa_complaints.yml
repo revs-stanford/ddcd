@@ -1,0 +1,162 @@
+title: NHTSA Complaints
+source:
+  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
+  name: National Highway Traffic Safety Administration
+
+categories:
+  topical:
+    - Safety
+  size:
+    - Large
+  geography:
+    - U.S.
+
+
+data_fields:
+  - name: CMPLID
+    type: CHAR(9)
+    description: NHTSA'S INTERNAL UNIQUE SEQUENCE NUMBER. IS AN UPDATEABLE FIELD,THUS DATA FOR A
+  - name: ODINO
+    type: CHAR(9)
+    description: NHTSA'S INTERNAL REFERENCE NUMBER. THIS NUMBER MAY BE REPEATED FOR
+  - name: MFR_NAME
+    type: CHAR(40)
+    description: MANUFACTURER'S NAME
+  - name: MAKETXT
+    type: CHAR(25)
+    description: VEHICLE/EQUIPMENT MAKE
+  - name: MODELTXT
+    type: CHAR(256)
+    description: VEHICLE/EQUIPMENT MODEL
+  - name: YEARTXT
+    type: CHAR(4)
+    description: MODEL YEAR, 9999 IF UNKNOWN or N/A
+  - name: CRASH
+    type: CHAR(1)
+    description: WAS VEHICLE INVOLVED IN A CRASH, 'Y' OR 'N'
+  - name: FAILDATE
+    type: CHAR(8)
+    description: DATE OF INCIDENT (YYYYMMDD)
+  - name: FIRE
+    type: CHAR(1)
+    description: WAS VEHICLE INVOLVED IN A FIRE 'Y' OR 'N'
+  - name: INJURED
+    type: NUMBER(2)
+    description: NUMBER OF PERSONS INJURED
+  - name: DEATHS
+    type: NUMBER(2)
+    description: NUMBER OF FATALITIES
+  - name: COMPDESC
+    type: CHAR(128)
+    description: SPECIFIC COMPONENT'S DESCRIPTION
+  - name: CITY
+    type: CHAR(30)
+    description: CONSUMER'S CITY
+  - name: STATE
+    type: CHAR(2)
+    description: CONSUMER'S STATE CODE
+  - name: VIN
+    type: CHAR(11)
+    description: VEHICLE'S VIN#
+  - name: DATEA
+    type: CHAR(8)
+    description: DATE ADDED TO FILE (YYYYMMDD)
+  - name: LDATE
+    type: CHAR(8)
+    description: DATE COMPLAINT RECEIVED BY NHTSA (YYYYMMDD)
+  - name: MILES
+    type: NUMBER(7)
+    description: VEHICLE MILEAGE AT FAILURE
+  - name: OCCURENCES
+    type: NUMBER(4)
+    description: NUMBER OF OCCURRENCES
+  - name: CDESCR
+    type: CHAR(2048)
+    description: DESCRIPTION OF THE COMPLAINT
+  - name: CMPL_TYPE
+    type: CHAR(4)
+    description: SOURCE OF COMPLAINT CODE
+  - name: POLICE_RPT_YN
+    type: CHAR(1)
+    description: WAS INCIDENT REPORTED TO POLICE 'Y' OR 'N'
+  - name: PURCH_DT
+    type: CHAR(8)
+    description: DATE PURCHASED (YYYYMMDD)
+  - name: ORIG_OWNER_YN
+    type: CHAR(1)
+    description: WAS ORIGINAL OWNER 'Y' OR 'N'
+  - name: ANTI_BRAKES_YN
+    type: CHAR(1)
+    description: ANTI-LOCK BRAKES 'Y' OR 'N'
+  - name: CRUISE_CONT_YN
+    type: CHAR(1)
+    description: CRUISE CONTROL 'Y' OR 'N'
+  - name: NUM_CYLS
+    type: NUMBER(2)
+    description: NUMBER OF CYLINDERS
+  - name: DRIVE_TRAIN
+    type: CHAR(4)
+    description: DRIVE TRAIN TYPE [AWD,4WD,FWD,RWD]
+  - name: FUEL_SYS
+    type: CHAR(4)
+    description: FUEL SYSTEM COD etc.
+  - name: FUEL_TYPE
+    type: CHAR(4)
+    description: FUEL TYPE COD etc.
+  - name: TRANS_TYPE
+    type: CHAR(4)
+    description: VEHICLE TRANSMISSION TYPE [AUTO, MAN]
+  - name: VEH_SPEED
+    type: NUMBER(3)
+    description: VEHICLE SPEED
+  - name: DOT
+    type: CHAR(20)
+    description: DEPARTMENT OF TRANSPORTATION TIRE IDENTIFIER
+  - name: TIRE_SIZE
+    type: CHAR(30)
+    description: TIRE SIZE
+  - name: LOC_OF_TIRE
+    type: CHAR(4)
+    description: LOCATION OF TIRE COD etc.
+  - name: TIRE_FAIL_TYPE
+    type: CHAR(4)
+    description: TYPE OF TIRE FAILURE COD etc.
+  - name: ORIG_EQUIP_YN
+    type: CHAR(1)
+    description: WAS PART ORIGINAL EQUIPMENT 'Y' OR 'N'
+  - name: MANUF_DT
+    type: CHAR(8)
+    description: DATE OF MANUFACTURE (YYYYMMDD)
+  - name: SEAT_TYPE
+    type: CHAR(4)
+    description: TYPE OF CHILD SEAT COD etc.
+  - name: RESTRAINT_TYPE
+    type: CHAR(4)
+    description: INSTALLATION SYSTEM CODE;
+  - name: DEALER_NAME
+    type: CHAR(40)
+    description: DEALER'S NAME
+  - name: DEALER_TEL
+    type: CHAR(20)
+    description: DEALER'S TELEPHONE NUMBER
+  - name: DEALER_CITY
+    type: CHAR(30)
+    description: DEALER'S CITY
+  - name: DEALER_STATE
+    type: CHAR(2)
+    description: DEALER'S STATE CODE
+  - name: DEALER_ZIP
+    type: CHAR(10)
+    description: DEALER'S ZIPCODE
+  - name: PROD_TYPE
+    type: CHAR(4)
+    description: PRODUCT TYPE COD etc.
+  - name: REPAIRED_YN
+    type: CHAR(1)
+    description: WAS DEFECTIVE TIRE REPAIRED 'Y' OR 'N'
+  - name: MEDICAL_ATTN
+    type: CHAR(1)
+    description: WAS MEDICAL ATTENTION REQUIRED 'Y' OR 'N'
+
+
+

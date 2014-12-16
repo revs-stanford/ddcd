@@ -1,0 +1,26 @@
+body{
+  padding-top: 40px;
+}
+
+header.woz{
+  .navbar{
+    font-size: 14px;
+    line-height: 1.0em;
+  }
+
+  .submenus{
+
+    li{
+        text-transform: uppercase;
+        a:link, a:visited {
+          color: $text-color;
+        }
+    }
+  }
+
+  @media (max-width: $screen-xs-max) {
+    .navbar.navbar-fixed-top{
+      position: relative;
+    }
+  }
+}

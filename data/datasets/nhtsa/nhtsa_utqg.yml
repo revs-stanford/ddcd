@@ -1,0 +1,44 @@
+title: Uniform Tire Quality Grade Standards
+description:
+  overview: |
+    UTQG stands for Uniform Tire Quality Grading.
+
+    The National Highway Traffic Safety Administration (NHTSA) established the Uniform Tire Quality Grading Standards (UTQGS) in 49 CFR 575.104[citation needed].
+
+    Dedicated winter tires, also known as snow tires, are not required to have a UTQG rating
+
+
+  detailed: |
+    Wikipedia boilerplate The UTQGS traction rating procedure specifies that the traction coefficients for asphalt and for concrete are to be calculated using the locked-wheel traction coefficient on the tire, or sliding coefficient of friction. More specifically, upon application of the brakes, the tire is subjected to shear between the wheel and the road surface, and deforms towards the rear of the vehicle.
+
+    This generates a traction force to oppose the motion of the vehicle. As braking torque increases, the tire deforms more and tread elements near the rear of the contact patch with the road begin to slip rather than grip. The coefficient of friction rapidly reaches a maximum value at about 10-20 percent slip, and then declines as the longitudinal slip values increase to 100 percent, which represents a fully locked tire. The maximum coefficient of friction in the 0-100 percent slip range is termed “peak” coefficient of friction, and the lower coefficient value for the fully locked tire is termed “slide” coefficient of friction. [1]
+
+
+
+
+categories:
+  topical:
+    - Safety
+    - Components
+  size:
+    - Large
+  geography:
+    - U.S.
+
+
+supplements:
+  - title: "How to Make a News App in Two Days, as Told by Six People Who Tried It for the First Time"
+    source:
+      url: http://www.propublica.org/nerds/item/how-to-make-a-news-app-in-two-days-as-told-by-six-people-who-tried-it-for-t
+      name: ProPublica
+
+  - title: Tire Tracker
+    description: This project was built during a two-day hackathon by the 2014 Knight-Mozilla OpenNews fellowship class and news application developers from ProPublica.
+    source:
+      url: http://projects.propublica.org/tires/
+      name: ProPublica
+
+  - title: Wikipedia entry for UTQG
+    source:
+      url: http://en.wikipedia.org/wiki/UTQG
+

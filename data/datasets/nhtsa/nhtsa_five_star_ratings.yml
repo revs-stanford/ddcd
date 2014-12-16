@@ -1,0 +1,22 @@
+title: NHTSA 5-Star Ratings
+source:
+  url: http://www.safercar.gov/Safety+Ratings
+  name: National Highway Traffic Safety Administration
+
+
+descriptions:
+  overview: |
+    NHTSA has set the standard for safety, helping consumers find safer cars with its 5-Star Safety Ratings for more than 30 years. 5-Star Safety Ratings measure the crashworthiness and rollover safety of vehicles. Five stars is the highest rating, one is the lowest.
+
+  technical: |
+    Contains two sets Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia in nam libero ab nesciunt non magni aliquam, sapiente maiores. Earum est soluta, dicta voluptatibus accusamus asperiores expedita similique nisi.
+
+
+categories:
+  topical:
+    - Safety
+  size:
+    - Large
+  geography:
+    - U.S.
+

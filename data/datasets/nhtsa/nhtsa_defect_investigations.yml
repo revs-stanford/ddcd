@@ -1,0 +1,47 @@
+title: NHTSA Defect Investigations
+source:
+  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
+  name: National Highway Traffic Safety Administration
+
+categories:
+  topical:
+    - Safety
+  size:
+    - Large
+  geography:
+    - U.S.
+
+data_fields:
+  - name: NHTSA ACTION NUMBER
+    type: CHAR(10)
+    description: NHTSA Identification Number
+  - name: MAKE
+    type: CHAR(25)
+    description: Vehicle/Equipment Make
+  - name: MODEL
+    type: CHAR(256)
+    description: Vehicle/Equipment Model
+  - name: YEAR
+    type: CHAR(4)
+    description: Model Year, 9999 if Unknown or N/A
+  - name: COMPNAME
+    type: CHAR(256)
+    description: Component Description
+  - name: MFR_NAME
+    type: CHAR(40)
+    description: Manufacturer's Name
+  - name: ODATE
+    type: CHAR(8)
+    description: Date Opened (YYYYMMDD)
+  - name: CDATE
+    type: CHAR(8)
+    description: Date Closed (YYYYMMDD)
+  - name: CAMPNO
+    type: CHAR(9)
+    description: Recall Campaign Number, if applicable
+  - name: SUBJECT
+    type: CHAR(40)
+    description: Summary Description
+  - name: SUMMARY
+    type: CHAR(4000)
+    description: Summary Detail

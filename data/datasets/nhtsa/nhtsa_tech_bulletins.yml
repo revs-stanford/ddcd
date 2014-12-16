@@ -1,0 +1,45 @@
+title: NHTSA Technical Bulletins
+source:
+  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
+  name: National Highway Traffic Safety Administration
+
+categories:
+  topical:
+    - Safety
+  size:
+    - Medium
+  geography:
+    - U.S.
+
+data_fields:
+  - name: BULNO
+    type: CHAR(16)
+    description: SERVICE BULLETIN NUMBER
+  - name: BULREP
+    type: CHAR(16)
+    description: REPLACEMENT SERVICE BULLETIN NUMBER
+  - name: ID
+    type: NUMBER(9)
+    description: NHTSA ITEM NUMBER
+  - name: BULDTE
+    type: CHAR(8)
+    description: DATE OF BULLETIN
+  - name: COMPNAME
+    type: CHAR(128)
+    description: CODE FOR FAILING COMPONENT
+  - name: MAKETXT
+    type: CHAR(25)
+    description: VEHICLE/EQUIPMENT MAKE
+  - name: MODELTXT
+    type: CHAR(256)
+    description: VEHICLE/EQUIPMENT MODEL
+  - name: YEARTXT
+    type: CHAR(4)
+    description: MODEL YEAR, 9999 IF UNKNOWN or N/A
+  - name: DATEA
+    type: CHAR(8)
+    description: DATE ADDED TO FILE
+  - name: SUMMARY
+    type: CHAR(240)
+    description: DESCRIPTION OF SUMMARY
+

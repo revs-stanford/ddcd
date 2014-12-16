@@ -1,0 +1,101 @@
+title: NHTSA Recalls
+source:
+  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
+  name: National Highway Traffic Safety Administration
+
+description:
+  overview: |
+    NHTSA has set the standard for safety, helping consumers find safer cars with its 5-Star Safety Ratings for more than 30 years. 5-Star Safety Ratings measure the crashworthiness and rollover safety of vehicles. Five stars is the highest rating, one is the lowest.
+
+  technical: |
+    Contains two sets Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia in nam libero ab nesciunt non magni aliquam, sapiente maiores. Earum est soluta, dicta voluptatibus accusamus asperiores expedita similique nisi.
+
+
+
+categories:
+  topical:
+    - Safety
+  size:
+    - Medium
+  geography:
+    - U.S.
+
+
+downloads:
+  - name: Direct
+    url: http://www-odi.nhtsa.dot.gov/downloads/folders/Recalls/FLAT_RCL.zip
+
+
+data_fields:
+  - name: RECORD_ID
+    type: NUMBER(9)
+    description: RUNNING SEQUENCE NUMBER, WHICH UNIQUELY IDENTIFIES THE RECORD.
+  - name: CAMPNO
+    type: CHAR(12)
+    description: NHTSA CAMPAIGN NUMBER
+  - name: MAKETXT
+    type: CHAR(25)
+    description: VEHICLE/EQUIPMENT MAKE
+  - name: MODELTXT
+    type: CHAR(256)
+    description: VEHICLE/EQUIPMENT MODEL
+  - name: YEARTXT
+    type: CHAR(4)
+    description: MODEL YEAR, 9999 IF UNKNOWN or N/A
+  - name: MFGCAMPNO
+    type: CHAR(20)
+    description: MFR CAMPAIGN NUMBER
+  - name: COMPNAME
+    type: CHAR(256)
+    description: COMPONENT DESCRIPTION
+  - name: MFGNAME
+    type: CHAR(40)
+    description: MANUFACTURER THAT FILED DEFECT/NONCOMPLIANCE REPORT
+  - name: BGMAN
+    type: CHAR(8)
+    description: BEGIN DATE OF MANUFACTURING
+  - name: ENDMAN
+    type: CHAR(8)
+    description: END DATE OF MANUFACTURING
+  - name: RCLTYPECD
+    type: CHAR(4)
+    description: VEHICLE, EQUIPMENT OR TIRE REPORT
+  - name: POTAFF
+    type: NUMBER(9)
+    description: POTENTIAL NUMBER OF UNITS AFFECTED
+  - name: ODATE
+    type: CHAR(8)
+    description: DATE OWNER NOTIFIED BY MFR
+  - name: INFLUENCED_BY
+    type: CHAR(4)
+    description: RECALL INITIATOR (MFR/OVSC/ODI)
+  - name: MFGTXT
+    type: CHAR(40)
+    description: MANUFACTURERS OF RECALLED VEHICLES/PRODUCTS
+  - name: RCDATE
+    type: CHAR(8)
+    description: REPORT RECEIVED DATE
+  - name: DATEA
+    type: CHAR(8)
+    description: RECORD CREATION DATE
+  - name: RPNO
+    type: CHAR(3)
+    description: REGULATION PART NUMBER
+  - name: FMVSS
+    type: CHAR(10)
+    description: FEDERAL MOTOR VEHICLE SAFETY STANDARD NUMBER
+  - name: DESC_DEFECT
+    type: CHAR(2000)
+    description: DEFECT SUMMARY
+  - name: CONEQUENCE_DEFECT
+    type: CHAR(2000)
+    description: CONSEQUENCE SUMMARY
+  - name: CORRECTIVE_ACTION
+    type: CHAR(2000)
+    description: CORRECTIVE SUMMARY
+  - name: NOTES
+    type: CHAR(2000)
+    description: RECALL NOTES
+  - name: RCL_CMPT_ID
+    type: CHAR(27)
+    description: NUMBER THAT UNIQUELY IDENTIFIES A RECALLED COMPONENT.

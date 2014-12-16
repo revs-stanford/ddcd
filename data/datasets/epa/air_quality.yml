@@ -1,0 +1,13 @@
+title: EPA AirData
+source:
+  url: http://www.epa.gov/airdata/
+  name: U.S. Environmental Protection Agency
+
+categories:
+  topical:
+    - Environment
+  size:
+    - Large
+  geography:
+    - U.S.
+

@@ -1,0 +1,17 @@
+title: Petroleum, Weekly Supply Estimates
+source:
+  url: http://www.eia.gov/dnav/pet/pet_sum_sndw_dcus_nus_w.htm
+  name: U.S. Energy Information Agency
+
+categories:
+  topical:
+    - Environment
+    - Fuel
+  size:
+    - Medium
+  geography:
+    - U.S.
+
+
+# Downloads: Has excel files
+

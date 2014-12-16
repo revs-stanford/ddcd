@@ -1,0 +1,14 @@
+title: NHTSA Fatality Analysis Reporting System
+source:
+  url: http://www.nhtsa.gov/FARS
+  name: National Highway Traffic Safety Administration
+
+categories:
+  topical:
+    - Safety
+    - Geolocation
+  size:
+    - Huge
+  geography:
+    - U.S.
+

@@ -1,0 +1,61 @@
+#landing-page{
+  position: relative;
+
+  p{
+    font-family: $font-family-serif;
+  }
+
+  .sec{
+    margin-bottom: 2.0em;
+    padding-bottom: 2.0em;
+  }
+
+
+  .callout{
+    background: #EEE9D9;
+    padding: 3.0em 0;
+  }
+
+
+  @media (max-width: $screen-xs-max) {
+    #banner{
+      height: inherit;
+      position:relative;
+      .title{
+        font-size: 2.0em;
+        margin-bottom: 0.1em;
+        margin-top: 0.1em;
+      }
+    }
+  }
+
+
+  #description{
+
+  }
+
+  #schedule{
+    h4{
+      margin-top: 1.5em;
+    }
+  }
+
+  .person{
+    height: 250px;
+    margin-bottom: 0.5em;
+
+    .title{
+      font-weight: bold;
+    }
+
+    .name{
+      font-weight: bold;
+      color: $stanford-red;
+    }
+
+    .description{
+      font-size: 0.9em;
+    }
+  }
+
+}

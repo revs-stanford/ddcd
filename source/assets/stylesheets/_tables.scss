@@ -1,0 +1,26 @@
+table{
+  td, th{
+    border-top: 1px solid #ddd;
+    font-family: $font-family-sans-serif;
+    line-height: 1.428571429;
+    text-align: center;
+    padding: 5px;
+    vertical-align: top;
+  }
+
+
+  width: 100%;
+
+  // /* names left justified, etc. */
+  // &.labeled{
+  //   td:first-child, th:first-child{
+  //     text-align: left;
+  //   }
+  // }
+
+  &.lefty{
+    td, th{
+      text-align: left;
+    }
+  }
+}

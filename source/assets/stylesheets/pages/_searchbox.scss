@@ -1,0 +1,28 @@
+.banner .searchbox{
+  .chosen-container {
+    font-size: 1.2em;
+  }
+
+  .chosen-container-single{
+    .chosen-single{
+      height: 2.0em;
+      padding: 0.3em;
+    }
+  }
+
+  .chosen-search{
+    input[type="text"] {
+      color: $text-color;
+
+      padding: 0.5em 1.0em;
+      font-size: 1.3em;
+      border: 1px solid $brand-primary;
+      background: #eee $chosen-sprite no-repeat 100% -20px;
+      // @include background($chosen-sprite no-repeat 100% -20px);
+      // font-size: 2em;
+      font-family: $font-family-sans-serif;
+    }
+  }
+}
+
+

@@ -1,0 +1,14 @@
+title: NYC Taxi Rides
+source:
+  url: http://www.nyc.gov/html/tlc/html/home/home.shtml
+  name: NYC Taxi and Limousine Commission
+
+categories:
+  topical:
+    - Business
+    - Geolocation
+  size:
+    - Huge
+  geography:
+    - City
+

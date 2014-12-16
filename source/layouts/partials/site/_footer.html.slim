@@ -1,0 +1,36 @@
+footer class='woz'
+  div class='container'
+
+    div.contact-info
+      h4 Contact Us
+      p If you have any questions, please email #{{config[:contact_info][0]}} at #{{mail_to config[:contact_info][1]}}
+
+    div.row
+
+      div.col-sm-4
+        h5 Stanford Journalism
+        ul.list.list-unstyled
+          li = link_to 'Homepage', 'http://journalism.stanford.edu/'
+          li = link_to 'News', 'http://journalism.stanford.edu/news/'
+          li = link_to 'Curriculum', 'http://journalism.stanford.edu/curriculum/'
+          li = link_to 'People', 'http://journalism.stanford.edu/faculty/'
+          li = link_to 'Twitter', 'https://twitter.com/stanfordjourn'
+          li = link_to 'Facebook', 'https://www.facebook.com/StanfordJournalism'
+
+      div.col-sm-4
+        h5 REVS@Stanford
+        ul.list.list-unstyled
+          li = link_to 'Homepage', 'http://revs.stanford.edu/'
+          li = link_to 'Blog', 'http://revs.stanford.edu/blog'
+          li = link_to 'People', 'http://revs.stanford.edu/about/people'
+          li = link_to 'Press Coverage', 'http://revs.stanford.edu/about/press-coverage'
+          li = link_to 'Twitter', 'https://twitter.com/stanfordrevs'
+          li = link_to 'RSS', 'http://revs.stanford.edu/about/rss.xml'
+
+      div.col-sm-4
+        h5 CARS@Stanford
+        ul.list.list-unstyled
+          li = link_to 'Homepage', 'http://automotive.stanford.edu/'
+          li = link_to 'News', 'http://automotive.stanford.edu/news.html'
+          li = link_to 'Curriculum', 'http://automotive.stanford.edu/education.html'
+          li = link_to 'People', 'http://automotive.stanford.edu/people.html'
