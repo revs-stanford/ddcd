@@ -11,6 +11,14 @@ categories:
   geography:
     - U.S.
 
+# visualizations:
+#   - name: Hello World
+#     dependencies:
+#       vendor:
+#         - 'd3.js'
+#       data:
+#         - 'stuff.json'
+
 data_fields:
   - name: NHTSA ACTION NUMBER
     type: CHAR(10)

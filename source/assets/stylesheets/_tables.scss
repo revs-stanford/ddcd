@@ -23,4 +23,8 @@ table{
       text-align: left;
     }
   }
+
+  &.data-table{
+    font-family: $font-family-monospace;
+  }
 }

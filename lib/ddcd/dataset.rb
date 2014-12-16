@@ -2,7 +2,7 @@ require 'hashie'
 require 'andand'
 module DDCD
   class Dataset
-    attr_reader :title, :slug, :categories, :descriptions, :source
+    attr_reader :title, :slug, :categories, :descriptions, :source, :fields
     def initialize(obj)
       h = Hashie::Mash.new obj
       @title = h.title
@@ -10,18 +10,23 @@ module DDCD
       @categories = h.categories
       @descriptions = h.descriptions || {}
       @source = h.source
+      @fields = h.data_fields
     end
 
     def url
       "/datasets/#{slug}"
     end
 
+    def name # alias
+      @title
+    end
+
     def source_name
-      source.name.to_s
+      source.name.to_s if source
     end
 
     def source_url
-      source.url.to_s
+      source.url.to_s if source
     end
 
 
@@ -48,15 +53,7 @@ module DDCD
     def primary_topic
       topical_categories.andand.first
     end
-
-
-
-
-
   end
 
 
-  def Dataset(object)
-    Dataset.new(object)
-  end
 end

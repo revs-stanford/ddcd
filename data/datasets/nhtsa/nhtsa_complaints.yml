@@ -11,6 +11,21 @@ categories:
   geography:
     - U.S.
 
+supplements:
+  - title: Auto Regulators Dismissed Defect Tied to 13 Deaths
+    url: http://www.nytimes.com/2014/03/09/business/auto-regulators-dismissed-defect-tied-to-13-deaths.html?_r=0
+    date: 2014-03-08
+    description: |
+      Federal safety regulators received more than 260 complaints over the last 11 years about General Motors vehicles that suddenly turned off while being driven, but they declined to investigate the problem, which G.M. now says is linked to 13 deaths and requires the recall of more than 1.6 million cars worldwide.
+
+visualizations:
+  - title: Reconstructing a Recall
+    source:
+      url: http://www.nytimes.com/interactive/2014/03/09/business/Reconstructing-a-Recall.html
+      name: New York Times
+    image_url: "nyt-reconstructing-a-recall.png"
+    description: |
+      General Motors is recalling more than 1.6 million vehicles because of defective ignition switches in six different models. The cars had problems for ten years and were ultimately linked to 31 accidents and 13 deaths before the recall. During that time, drivers logged complaints to the National Highway Traffic Safety Administration, but the federal agency responded that an investigation was not necessary.
 
 data_fields:
   - name: CMPLID
