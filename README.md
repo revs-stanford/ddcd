@@ -3,6 +3,27 @@ This is the repo for REVS data
 
 This site is built with the [Middleman static site generator](//middlemanapp.com).
 
+## Developer/installation instructions
+
+1. Clone the repo to your computer:
+
+            git clone https://github.com/revs-stanford/ddcd
+            # change into the directory
+            cd ddcd  
+
+2. Install the necessary Ruby gem dependencies:
+          
+           bundle install
+
+3. Start the local webserver:
+
+           middleman server
+
+4. Visit the site in a browser at __127.0.0.1:4567__
+
+---------
+
+Notes about drafting the site:
 
 ## Site structure
 
