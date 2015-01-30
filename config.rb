@@ -79,6 +79,8 @@ ready do
     arr
   end
 
+  ignore "/templates/*.html"
+
   # hacky
   categorizer.index_tagged_items(ft)
   categorizer.tags.each do |tag|
