@@ -1,0 +1,28 @@
+title: NYC Taxi Rides
+source:
+  url: http://www.nyc.gov/html/tlc/html/home/home.shtml
+  name: NYC Taxi and Limousine Commission
+
+# categories:
+#   topical:
+#     - Business
+#     - Geolocation
+#   size:
+#     - Huge
+#   geography:
+#     - City
+
+tags:
+  - Business
+  - Geolocation
+  - Huge
+  - City
+
+visualizations:
+  - title: "So, where's my taxi?"
+    description: |
+      Via the NYC Taxi Viz team: "Are you constantly trying to figure out which is a good intersection to hail a cab in the area you are at? Do you want to know how the cab availability in your area is? We constantly make ourselves these same questions so here we give you a tool that will help you find out the answers. Simply choose the time of the day and day type and you will be all set!"
+    image_url: nyctaxiviz-for-riders.png
+    source:
+      name: NYC Taxi Viz
+      url: http://www.nyctaxiviz.com/for-riders.html
