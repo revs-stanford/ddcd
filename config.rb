@@ -64,20 +64,31 @@ end
 ready do
 
   categorizer = DDCD::Categorizer.new(data.categories)
-  vizzes = []
+
   ## flatten the datasets
-  ft = data.datasets.inject([]) do |arr, (folder, fnames)|
-    fnames.each_pair do |slug, obj|
-      obj[:slug] = slug
-      d = DDCD::Dataset.new(obj)
-      d.categories = categorizer.organize_tags(d.tags)
-      vizzes.concat d.visualizations
+  # ft = data.datasets.inject([]) do |arr, (folder, fnames)|
+  #   fnames.each_pair do |slug, obj|
+  #     obj[:slug] = slug
+  #     d = DDCD::Dataset.new(obj)
+  #     d.categories = categorizer.organize_tags(d.tags)
+  #     vizzes.concat d.visualizations
 
-      arr << d
-    end
+  #     arr << d
+  #   end
 
-    arr
+  #   arr
+  # end
+
+  ft = data.datasets.map do |(slug, obj)|
+    obj[:slug] = slug
+    d = DDCD::Dataset.new(obj)
+    d.categories = categorizer.organize_tags(d.tags)
+
+    d
   end
+
+  vizzes = ft.map{|d| d.visualizations }.flatten
+
 
   ignore "/templates/*.html"
 

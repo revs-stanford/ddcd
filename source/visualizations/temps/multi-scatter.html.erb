@@ -1,0 +1,57 @@
+<section class="sec banner">
+  <div class="container">
+    <h2>scatter plot</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sed provident ipsa placeat non nisi dolorum vitae, deserunt veniam harum quasi aut iste nam aliquam ipsam officia quod, totam eveniet.</p>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="container">
+
+      <div id="the-chart">
+
+      </div>
+
+  </div>
+</section>
+
+
+<script>
+
+// set up our data series with 50 random data points
+
+var seriesData = [ [], [], [] ];
+var random = new Rickshaw.Fixtures.RandomData(150);
+
+for (var i = 0; i < 500; i++) {
+  random.addData(seriesData);
+}
+
+// instantiate our graph!
+
+var graph = new Rickshaw.Graph( {
+  element: document.getElementById("the-chart"),
+  height: 500,
+  renderer: 'scatterplot',
+  series: [
+    {
+      name: 'stuff',
+      color: "#ff9030",
+      data: seriesData[0],
+    }, {
+      name: "hello",
+      color: "#ff4040",
+      data: seriesData[1],
+    }
+  ]
+} );
+
+graph.renderer.dotSize = 6;
+
+new Rickshaw.Graph.HoverDetail({ graph: graph });
+
+graph.render();
+
+</script>

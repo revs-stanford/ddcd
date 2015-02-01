@@ -1,0 +1,44 @@
+<section class="sec banner">
+  <div class="container">
+  <h2>Heat Map</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sed provident ipsa placeat non nisi dolorum vitae, deserunt veniam harum quasi aut iste nam aliquam ipsam officia quod, totam eveniet.</p>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="container">
+    <div id="map" style="width: 800px; height: 500px;">
+
+    </div>
+  </div>
+</section>
+
+
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    var osmAttr = '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>';
+
+    // L.TileLayer.OpenStreetMap = L.TileLayer.Common.extend({
+    //   url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    //   options: {attribution: osmAttr}
+    // });
+
+
+      map.addLayer(new L.StamenTileLayer('toner', {
+                        detectRetina: true
+                    }));
+
+
+    // L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 18,
+    //   attribution: osmAttr,
+    //   id: 'examples.map-i875mjb7'
+    // }).addTo(map);
+
+
+
+
+</script>
