@@ -1,7 +1,13 @@
 title: NHTSA Complaints
+description: |
+  Contains all safety-related defect complaints received by NHTSA since Jan. 1, 1995, including information on accidents in which a defect is believed to have been a factor.
+
 source:
-  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
-  name: National Highway Traffic Safety Administration
+  main: National Highway Traffic Safety Administration
+  sub: Office of Defect Investigations
+
+links:
+  - url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
 
 # categories:
 #   topical:
@@ -15,6 +21,9 @@ tags:
   - Safety
   - Large
   - U.S.
+
+
+
 
 
 supplements:

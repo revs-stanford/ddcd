@@ -1,7 +1,11 @@
 title: EPA AirData
 source:
-  url: http://www.epa.gov/airdata/
-  name: U.S. Environmental Protection Agency
+  name: EPA
+  level: Federal
+links:
+  - title: Official Data Portal
+    url: http://www.epa.gov/airdata/
+
 
 # categories:
 #   topical:
