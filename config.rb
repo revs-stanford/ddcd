@@ -61,23 +61,16 @@ activate :s3_sync do |s3_sync|
 end
 
 
+
+page "/data_tk/*", :layout => '/layouts/dataset_layout.slim'
+
+
+
 ready do
 
   categorizer = DDCD::Categorizer.new(data.categories)
 
-  ## flatten the datasets
-  # ft = data.datasets.inject([]) do |arr, (folder, fnames)|
-  #   fnames.each_pair do |slug, obj|
-  #     obj[:slug] = slug
-  #     d = DDCD::Dataset.new(obj)
-  #     d.categories = categorizer.organize_tags(d.tags)
-  #     vizzes.concat d.visualizations
 
-  #     arr << d
-  #   end
-
-  #   arr
-  # end
 
   ft = data.datasets.map do |(slug, obj)|
     obj[:slug] = slug
