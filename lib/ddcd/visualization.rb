@@ -38,6 +38,12 @@ module DDCD
       source.name.to_s if source
     end
 
+    def source_name_and_author
+      [source.author, source.name].compact.join(', ')
+    end
+
+
+
     def source_url
       source.url.to_s if source
     end

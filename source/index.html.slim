@@ -36,14 +36,14 @@ div id="landing-page"
       h2 Categories
       p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere dicta vitae repudiandae perspiciatis nobis sint, quod, consequatur, reiciendis, laudantium itaque obcaecati debitis. Nostrum blanditiis nulla, culpa nam eius provident minus.
 
-      - config[:categorizer].categories.each_pair do |cat_groupname, cat_names|
-          h4 => cat_groupname
-          ul.list-inline
-            - cat_names.each do |tag|
-              li
-                => link_to_tag tag
-                - datasets = config[:categorizer].items_tagged_as(tag)
-                span.count => "(#{datasets.count})"
+      / - config[:categorizer].categories.each_pair do |cat_groupname, cat_names|
+      /     h4 => cat_groupname
+      /     ul.list-inline
+      /       - cat_names.each do |tag|
+      /         li
+      /           => link_to_tag tag
+      /           - datasets = config[:categorizer].items_tagged_as(tag)
+      /           span.count => "(#{datasets.count})"
 
   section.sec
     div.container

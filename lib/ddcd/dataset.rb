@@ -2,8 +2,8 @@ require 'hashie'
 require 'andand'
 module DDCD
   class Dataset
-    attr_reader :title, :slug, :categories, :descriptions, :source,
-      :fields, :visualizations, :tags, :supplements
+    attr_reader :title, :slug, :categories, :description, :source,
+      :fields, :visualizations, :tags, :supplements, :url
     attr_accessor :categories
     def initialize(obj)
       h = Hashie::Mash.new obj
@@ -11,16 +11,14 @@ module DDCD
       @slug = h.slug
       @categories = {}
       @tags = h.tags
-      @descriptions = h.descriptions || {}
+      @description = h.description
       @source = h.source
       @fields = h.data_fields
       @visualizations = init_vizzes( h.visualizations )
       @supplements = h.supplements || []
+      @url = obj.url
     end
 
-    def url
-      "/datasets/#{slug}"
-    end
 
     def name # alias
       @title
@@ -34,10 +32,13 @@ module DDCD
       source.url.to_s if source
     end
 
+    def source_name_and_author
+      [source.author, source.name].compact.join(', ')
+    end
 
-    ### description stuff
+
     def deck
-      descriptions.values[0] || "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta ad, incidunt numquam voluptas, nesciunt dolorum illum, aperiam molestias consequuntur qui amet! Laboriosam facilis perspiciatis suscipit fugiat consequatur est, ex, animi?"
+      "TK DECK"
     end
 
 

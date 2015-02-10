@@ -68,14 +68,15 @@ page "/data_tk/*", :layout => '/layouts/dataset_layout.slim'
 
 ready do
 
-  categorizer = DDCD::Categorizer.new(data.categories)
+  datapages = sitemap.resources.
+       select{|r| r.path =~ /(?:data_tk)\// }
 
 
-
-  ft = data.datasets.map do |(slug, obj)|
-    obj[:slug] = slug
+  ft = datapages.map do |resource|
+    obj = resource.data.dup
+    obj[:slug] = File.basename(resource.path, '.html')
+    obj[:url] = resource.url
     d = DDCD::Dataset.new(obj)
-    d.categories = categorizer.organize_tags(d.tags)
 
     d
   end
@@ -85,16 +86,6 @@ ready do
 
   ignore "/templates/*.html"
 
-  # hacky
-  categorizer.index_tagged_items(ft)
-  categorizer.tags.each do |tag|
-    # TODO: come up with proper tag slug/model
-    proxy tag_path(tag), '/templates/tag.html', locals: {tag: tag, datasets: categorizer.items_tagged_as(tag)}
-  end
-
-  ft.each do |dataset|
-    proxy dataset.url, '/templates/dataset.html', locals: {dataset: dataset}
-  end
 
   vizzes.each do |viz|
     if viz.native?
@@ -104,6 +95,5 @@ ready do
 
   set :all_datasets, ft
   set :all_visualizations, vizzes
-  set :categorizer, categorizer
 
 end

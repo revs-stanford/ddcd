@@ -86,15 +86,24 @@ csv = CSV.new(open(url).read, headers: true)
 arr = []
 csv.each do |c|
    h = Hash.new{|x,y| x[y] = {}}
-   slug = c['Slug']
-   h[:title] = c['Title']
-   h[:source] = {primary: c['Agency'], sub: c['Subagency']}
-   h[:description] = c['Description']
-   
+   h['title'] = c['Title']
+   h['slug'] = c['Slug'].gsub(/-+/, '-').sub(/^-/, '').sub(/-$/, '')
+   h['source'] = {'primary' => c['Agency'], 'sub' => c['Subagency']}
+   h['description'] = "#{c['Description'].gsub(/\s+/,' ')}"
+   h['links'] = []
 
-   arr << c.to_h
+   ['Official URL', 'Official Data Portal', 'Official data direct link', 'Official documentation'].each do |u|
+      h['links'] << {'name' => u, 'url' => c[u]} unless c[u].to_s.empty?
+   end
+
+   arr << h
 end
 
-
+arr.each do |doc|
+  open(File.join('./_drafts/temp/', doc['slug'] + '.md'), 'w') do |d|
+    d.puts doc.to_yaml
+    d.puts '---'
+  end
+end
 ~~~
 

@@ -5,7 +5,7 @@ body.woz data-spy="scroll" data-target=".navbar-scroll" data-offset="10"
   = partial "layouts/partials/site/header"
 
 
-  - dataset = current_page.data
+  - dataset = get_dataset_object current_page
   div#dataset-page
     section.sec.meta
       div.container
@@ -22,6 +22,7 @@ body.woz data-spy="scroll" data-target=".navbar-scroll" data-offset="10"
     - if dataset.visualizations?
       section.sec.visualizations.listing
         div.container
+
           - dataset.visualizations.each do |v|
             div.row
               div.visualization.box
@@ -30,7 +31,10 @@ body.woz data-spy="scroll" data-target=".navbar-scroll" data-offset="10"
                     => image_tag v.image_url
                 div.col-sm-8
                   div.title => link_to v.title, v.url
-                  div.description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est nemo. Repellat tenetur omnis alias ducimus ipsum ratione accusantium vel, possimus, eveniet quod velit, amet tempora. Alias molestiae ipsum dolor!
+                  div.source
+                    span.name => v.source_name_and_author
+                  div.description => make_markdown v.description
+
     section.sec.content
       div.container
         => yield
