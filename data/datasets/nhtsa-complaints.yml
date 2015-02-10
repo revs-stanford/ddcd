@@ -1,7 +1,13 @@
 title: NHTSA Complaints
+description: |
+  Contains all safety-related defect complaints received by NHTSA since Jan. 1, 1995, including information on accidents in which a defect is believed to have been a factor.
+
 source:
-  url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
-  name: National Highway Traffic Safety Administration
+  main: National Highway Traffic Safety Administration
+  sub: Office of Defect Investigations
+
+links:
+  - url: http://www-odi.nhtsa.dot.gov/owners/SearchSafetyIssues
 
 # categories:
 #   topical:
@@ -15,6 +21,9 @@ tags:
   - Safety
   - Large
   - U.S.
+
+
+
 
 
 supplements:
@@ -89,10 +98,10 @@ data_fields:
     description: VEHICLE/EQUIPMENT MODEL
   - name: YEARTXT
     type: CHAR(4)
-    description: MODEL YEAR, 9999 IF UNKNOWN or N/A
+    description: "MODEL YEAR, 9999 IF UNKNOWN or N/A"
   - name: CRASH
     type: CHAR(1)
-    description: WAS VEHICLE INVOLVED IN A CRASH, 'Y' OR 'N'
+    description: "WAS VEHICLE INVOLVED IN A CRASH, 'Y' OR 'N'"
   - name: FAILDATE
     type: CHAR(8)
     description: DATE OF INCIDENT (YYYYMMDD)
@@ -155,7 +164,7 @@ data_fields:
     description: NUMBER OF CYLINDERS
   - name: DRIVE_TRAIN
     type: CHAR(4)
-    description: DRIVE TRAIN TYPE [AWD,4WD,FWD,RWD]
+    description: "DRIVE TRAIN TYPE [AWD,4WD,FWD,RWD]"
   - name: FUEL_SYS
     type: CHAR(4)
     description: FUEL SYSTEM COD etc.
@@ -164,7 +173,7 @@ data_fields:
     description: FUEL TYPE COD etc.
   - name: TRANS_TYPE
     type: CHAR(4)
-    description: VEHICLE TRANSMISSION TYPE [AUTO, MAN]
+    description: "VEHICLE TRANSMISSION TYPE [AUTO, MAN]"
   - name: VEH_SPEED
     type: NUMBER(3)
     description: VEHICLE SPEED

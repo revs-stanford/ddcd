@@ -1,0 +1,71 @@
+<section class="sec banner">
+  <div class="container">
+    <h2>Multi-line</h2>
+
+    <p>
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae eveniet quisquam sapiente, omnis corporis quis? Libero deleniti sit, omnis ullam est eos perspiciatis quas ipsa amet nesciunt autem, totam eligendi.
+
+    </p>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="container">
+
+      <div id="the-chart">
+
+      </div>
+
+  </div>
+</section>
+
+
+<script>
+
+// set up our data series with 50 random data points
+
+var seriesData = [ [], [], [] ];
+var random = new Rickshaw.Fixtures.RandomData(150);
+
+for (var i = 0; i < 150; i++) {
+  random.addData(seriesData);
+}
+
+// instantiate our graph!
+
+var graph = new Rickshaw.Graph( {
+  element: document.getElementById("the-chart"),
+  height: 500,
+  renderer: 'line',
+  series: [
+    {
+      color: "#c05020",
+      data: seriesData[0],
+      name: 'New York'
+    }, {
+      color: "#30c020",
+      data: seriesData[1],
+      name: 'London'
+    }, {
+      color: "#6060c0",
+      data: seriesData[2],
+      name: 'Tokyo'
+    }
+  ]
+} );
+
+graph.render();
+
+var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+  graph: graph,
+  formatter: function(series, x, y) {
+    var date = '<span class="date">' + new Date(x * 1000).toUTCString() + '</span>';
+    var swatch = '<span class="detail_swatch" style="background-color: ' + series.color + '"></span>';
+    var content = swatch + series.name + ": " + parseInt(y) + '<br>' + date;
+    return content;
+  }
+} );
+
+</script>

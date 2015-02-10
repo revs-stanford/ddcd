@@ -1,0 +1,85 @@
+
+
+<style>
+  path{
+    fill: none;
+    stroke: #aaa;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+  path.land{
+    fill: #edeaea;
+  }
+.bubble {
+  fill-opacity: .5;
+  fill: #993333;
+  stroke: #fff;
+  stroke-width: .5px;
+}
+
+
+</style>
+
+<div id="bubble-map" style="width: 960px; height: 500px">
+
+</div>
+
+
+<script>
+  var width = 800, height = 400;
+  var projection =  d3.geo.albersUsa().scale(800).translate([width/ 2, height / 2]);
+
+  var path = d3.geo.path().projection(projection);
+  var svg = d3.select("#bubble-map").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+  var q = queue()
+    .defer(d3.json, "/visualizations/mapdata/ddcd-nyc-census.json")
+    .defer(d3.csv, "/visualizations/data/bubble-map-ozone.csv");
+
+  var radius = d3.scale.sqrt()
+    .domain([0.03, 0.12])
+    .range([0, 15]);
+
+
+
+  q.await(function(error, us, ozone_monitors) {
+
+    svg.append("path")
+      .datum(topojson.feature(us, us.objects.tracts))
+      .attr("class", "land")
+      .attr("d", path);
+
+   //svg.append("circle").attr("r",5).attr("transform", function() {return "translate(" + projection([-75,43]) + ")";});
+
+ svg.append("g")
+  .attr("class", "bubble")
+  .selectAll("circle")
+    .data(ozone_monitors)
+    .enter()
+    .append("circle")
+    .sort(function(a, b){
+      return b['4th Max Value'] - a['4th Max Value']
+    })
+
+    .attr("r", function(d){
+      var q = +d['4th Max Value'];
+      return radius(q); })
+    .attr("transform", function(d) {return "translate(" + projection([d.Longitude,d.Latitude]) + ")";});
+
+  });
+
+
+
+
+// http://gis.stackexchange.com/questions/34769/how-can-i-render-latitude-longitude-coordinates-on-a-map-with-d3
+//  svg.selectAll("circles.points")
+// .data(yourData)
+// .enter()
+// .append("circle")
+// .attr("r",5)
+// .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
+
+</script>

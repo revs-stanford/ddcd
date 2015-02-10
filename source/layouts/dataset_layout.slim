@@ -1,0 +1,42 @@
+= partial "layouts/partials/site/header_meta"
+
+body.woz data-spy="scroll" data-target=".navbar-scroll" data-offset="10"
+
+  = partial "layouts/partials/site/header"
+
+
+  - dataset = current_page.data
+  div#dataset-page
+    section.sec.meta
+      div.container
+        h5 Dataset
+        h2 => dataset.title
+        div.description
+          p => dataset.description
+
+        div.source
+          p => dataset.source.primary
+          p => dataset.source.sub
+
+
+    - if dataset.visualizations?
+      section.sec.visualizations.listing
+        div.container
+          - dataset.visualizations.each do |v|
+            div.row
+              div.visualization.box
+                div.col-sm-4
+                  div.imgwrap
+                    => image_tag v.image_url
+                div.col-sm-8
+                  div.title => link_to v.title, v.url
+                  div.description  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, est nemo. Repellat tenetur omnis alias ducimus ipsum ratione accusantium vel, possimus, eveniet quod velit, amet tempora. Alias molestiae ipsum dolor!
+    section.sec.content
+      div.container
+        => yield
+
+  = partial "layouts/partials/site/footer"
+
+
+
+

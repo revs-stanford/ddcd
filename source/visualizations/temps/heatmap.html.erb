@@ -1,0 +1,81 @@
+<section class="sec banner">
+  <div class="container">
+  <h2>Heat Map</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sed provident ipsa placeat non nisi dolorum vitae, deserunt veniam harum quasi aut iste nam aliquam ipsam officia quod, totam eveniet.</p>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="pickups" style="height: 500px;">
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div id="dropoffs" style="height: 500px;">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script src="/visualizations/data/coords.json"></script>
+<script src="/visualizations/data/dropoffs.json"></script>
+
+<script>
+
+$(document).ready(function(){
+      var map_pickups = L.map('pickups').setView([40.7480372,-73.9661407], 11);
+
+
+    // L.TileLayer.OpenStreetMap = L.TileLayer.Common.extend({
+    //   url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    //   options: {attribution: osmAttr}
+    // });
+
+
+      map_pickups.addLayer(new L.StamenTileLayer('toner-background', {
+                        detectRetina: true
+                    }));
+    var heat = L.heatLayer(coords,
+      {radius: 5, blur: 2, gradient: {0.3: 'orange', 0.5: '#FF4444', 1: '#660000'}}
+
+    ).addTo(map_pickups);
+
+    var map_dropoffs = L.map('dropoffs').setView([40.7480372,-73.9661407], 11);
+
+
+    // L.TileLayer.OpenStreetMap = L.TileLayer.Common.extend({
+    //   url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    //   options: {attribution: osmAttr}
+    // });
+
+
+      map_dropoffs.addLayer(new L.StamenTileLayer('toner-background', {
+                        detectRetina: true
+                    }));
+    var heat = L.heatLayer(dropoffs,
+      {radius: 5, blur: 2, gradient: {0.3: 'orange', 0.5: '#FF4444', 1: '#660000'}}
+
+    ).addTo(map_dropoffs);
+
+
+    // L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    //   maxZoom: 18,
+    //   attribution: osmAttr,
+    //   id: 'examples.map-i875mjb7'
+    // }).addTo(map);
+
+
+
+})
+
+
+
+</script>

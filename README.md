@@ -59,3 +59,42 @@ A listing of all subcategories
 - Download/access type:
   + Direct link to official site
   + Cached copy
+
+
+
+
+----------------
+
+
+#### Data spreadsheet
+
+https://docs.google.com/a/stanford.edu/spreadsheets/d/18CSuy8fh9Ro0-k1UlIw5Q_Yso9O8uafrAfsJtmxKqik/edit#gid=0
+
+https://docs.google.com/a/stanford.edu/spreadsheets/d/18CSuy8fh9Ro0-k1UlIw5Q_Yso9O8uafrAfsJtmxKqik/export?format=csv&gid=0
+
+Using Ruby to export it to YAML
+
+~~~ruby
+require 'csv'
+require 'yaml'
+require 'open-uri'
+
+url='https://docs.google.com/a/stanford.edu/spreadsheets/d/18CSuy8fh9Ro0-k1UlIw5Q_Yso9O8uafrAfsJtmxKqik/export?format=csv&gid=0'
+
+
+csv = CSV.new(open(url).read, headers: true)
+arr = []
+csv.each do |c|
+   h = Hash.new{|x,y| x[y] = {}}
+   slug = c['Slug']
+   h[:title] = c['Title']
+   h[:source] = {primary: c['Agency'], sub: c['Subagency']}
+   h[:description] = c['Description']
+   
+
+   arr << c.to_h
+end
+
+
+~~~
+

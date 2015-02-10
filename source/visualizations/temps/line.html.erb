@@ -1,0 +1,32 @@
+<section class="sec banner">
+  <div class="container">
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error sed provident ipsa placeat non nisi dolorum vitae, deserunt veniam harum quasi aut iste nam aliquam ipsam officia quod, totam eveniet.</p>
+  </div>
+</section>
+
+
+<section class="sec">
+  <div class="container">
+    <div id="line-chart">
+
+    </div>
+  </div>
+</section>
+
+  <script>
+  var graph = new Rickshaw.Graph({
+    element: document.querySelector("#line-chart"),
+    height: 500,
+    renderer: 'line',
+    series: [{
+      data: [ { x: 0, y: 40 }, { x: 1, y: 49 }, { x: 2, y: 38 }, { x: 3, y: 30 }, { x: 4, y: 32 } ],
+      color: '#4682b4'
+    }, {
+      data: [ { x: 0, y: 20 }, { x: 1, y: 24 }, { x: 2, y: 19 }, { x: 3, y: 15 }, { x: 4, y: 16 } ],
+      color: '#9cc1e0'
+    }]
+  });
+  graph.render();
+
+  </script>

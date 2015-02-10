@@ -41,7 +41,6 @@ module DDCD
     end
 
 
-
     ## category stuff
     def data_size
       categories['Data Size'].andand.first
