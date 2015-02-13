@@ -3,18 +3,38 @@ title: "Data Driven: Stanford REVS and Journalism"
 description: All the car data for your car analysis
 ---
 
-div id="landing-page"
+div id="datasets-page"
 
 
   section.sec.banner
     div.container
-      h1.title Database of Car Data
-      p Explore hand-curated lists of transportation-related datasets and sample visualizations to use as a launchpad for data-driven transportation stories in your newsroom.
+      h1.title Database of Transportation Datasets
+      p We are building a repository of valuable datasets and journalism related to the vehicles we drive and the infrastructure that supports us. We want to provide a useful public service for those curious about data and transportation, and a place that showcases the best practices and examples in journalism and analysis.
+
+      p Explore the datasets as we continue to collect and curate them. And feel free to suggest your own. You can email us at <a href="mailto:journalism@commu.stanford.edu">journalism@commu.stanford.edu</a> or contact us at Twitter at <a href="https://twitter.com/stanfordjourn">@StanfordJourn.</a>
 
 
-  / We'll use this
-  / section.sec.visualizations.viz-isotope
-  /   - config[:all_visualizations].shuffle[0..8].each_with_index do |viz, idx|
-  /     div.visualization.square.item style="width: #{{[20,30,20,30,20,20,20,20,20][idx]}}%;"
-  /       div => link_to image_tag(viz.image_url), viz.url
+
+  section.sec.featured_listings
+    => partial '/layouts/partials/featured_listings.html'
+
+
+
+  section.sec.data_listings
+    div.container
+      - data.data_listings.each do |d|
+        div.data_listing
+          div.row
+            div.col-sm-8
+              h4.title => link_to d.title, d.links[0][:url]
+              div.source => [ d.source.primary, d.source.sub ].compact.join(', ')
+              p => d.description
+
+            - if d.image.present?
+              div.col-sm-4
+                a href="#{{d.image.url}}"
+                  div.imgwrap
+                    img src="#{{d.image.src}}"
+
+                    div.caption => d.image.caption
 

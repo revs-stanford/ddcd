@@ -159,6 +159,11 @@
     url: https://data.sfgov.org/Transportation/Parking-meters/7egw-qt89
 - title: Traffic Calming Point Features
   slug: san-francisco-traffic-calming-point-features
+  image:
+    src: /files/images/data_listings/sf-traffic-calming.png
+    url: https://data.sfgov.org/Transportation/Traffic-Calming-Point-Features/ddye-rism
+    caption: A Google Map of the traffic-calming features
+
   source:
     primary: San Francisco Municpal Transportation Agency
   description: This shapefile contains information about the locations of traffic calming point features in the City and County of San Francisco.
