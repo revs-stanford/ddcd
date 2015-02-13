@@ -99,6 +99,8 @@ csv.each do |c|
    arr << h
 end
 
+arr.each
+
 arr.each do |doc|
   open(File.join('./_drafts/temp/', doc['slug'] + '.md'), 'w') do |d|
     d.puts doc.to_yaml

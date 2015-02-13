@@ -14,9 +14,10 @@ body.woz data-spy="scroll" data-target=".navbar-scroll" data-offset="10"
         div.description
           p => dataset.description
 
-        div.source
-          p => dataset.source.primary
-          p => dataset.source.sub
+        - if dataset.source.present?
+          div.source
+            p => dataset.source.primary
+            p => dataset.source.sub
 
 
     - if dataset.visualizations?

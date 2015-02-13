@@ -3,38 +3,38 @@ require 'andand'
 module DDCD
   class Dataset
     attr_reader :title, :slug, :categories, :description, :source,
-      :fields, :visualizations, :tags, :supplements, :url
+      :fields, :visualizations, :supplements, :url, :links
     attr_accessor :categories
     def initialize(obj)
       h = Hashie::Mash.new obj
       @title = h.title
       @slug = h.slug
-      @categories = {}
-      @tags = h.tags
+      @links = h.links
       @description = h.description
       @source = h.source
       @fields = h.data_fields
       @visualizations = init_vizzes( h.visualizations )
-      @supplements = h.supplements || []
       @url = obj.url
     end
+
 
 
     def name # alias
       @title
     end
 
-    def source_name
-      source.name.to_s if source
-    end
 
-    def source_url
-      source.url.to_s if source
-    end
+    # def source_name
+    #   source.name.to_s if source
+    # end
 
-    def source_name_and_author
-      [source.author, source.name].compact.join(', ')
-    end
+    # def source_url
+    #   source.url.to_s if source
+    # end
+
+    # def source_name_and_author
+    #   [source.author, source.name].compact.join(', ')
+    # end
 
 
     def deck

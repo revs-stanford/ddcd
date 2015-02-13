@@ -48,8 +48,8 @@ end
 
 
 activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'ddcs-data-beta' # The name of the S3 bucket you are targetting. This is globally unique.
-  s3_sync.region                     = 'us-east-1'     # The AWS region for your bucket.
+  s3_sync.bucket                     = 'www.datadrivenstanford.org' # The name of the S3 bucket you are targetting. This is globally unique.
+  s3_sync.region                     = 'us-west-1'     # The AWS region for your bucket.
   s3_sync.delete                     = false # We delete stray files by default.
   s3_sync.after_build                = true # We do not chain after the build step by default.
   s3_sync.prefer_gzip                = false
@@ -62,14 +62,14 @@ end
 
 
 
-page "/data_tk/*", :layout => '/layouts/dataset_layout.slim'
+page "/features/*", :layout => '/layouts/dataset_layout.slim'
 
 
 
 ready do
 
   datapages = sitemap.resources.
-       select{|r| r.path =~ /(?:data_tk)\// }
+        select{|r| r.path =~ /(?:features)\// }
 
 
   ft = datapages.map do |resource|
@@ -81,19 +81,19 @@ ready do
     d
   end
 
-  vizzes = ft.map{|d| d.visualizations }.flatten
+  # vizzes = ft.map{|d| d.visualizations }.flatten
 
 
-  ignore "/templates/*.html"
+  # ignore "/templates/*.html"
 
 
-  vizzes.each do |viz|
-    if viz.native?
-      proxy viz.url, '/templates/viz.html', locals: {viz: viz}
-    end
-  end
+  # vizzes.each do |viz|
+  #   if viz.native?
+  #     proxy viz.url, '/templates/viz.html', locals: {viz: viz}
+  #   end
+  # end
 
   set :all_datasets, ft
-  set :all_visualizations, vizzes
+  # set :all_visualizations, vizzes
 
 end

@@ -4,30 +4,27 @@ description: All the datasets
 ---
 
 
-div id="datasets-page"
+div id="datasets-page" class="data_listings"
+
   section.sec.banner
     div.container
       h1.title Datasets
-      p Explore datasets from agencies like the Environmental Protection Agency to the National Highway Traffic Safety Administration, as well as more focused local data from New York and San Francisco. 
-
+      p Explore datasets from agencies like the Environmental Protection Agency to the National Highway Traffic Safety Administration, as well as more focused local data from New York and San Francisco.
   section.sec
     div.container
 
+        - data.data_listings.each do |d|
+          div.data_listing
+            div.row
+              div.col-sm-8
+                h4.title => link_to d.title, d.links[0][:url]
+                div.source => [ d.source.primary, d.source.sub ].compact.join(', ')
+                p => d.description
 
-      table.data-table.table-striped.lefty
-        thead
-          tr
-            th Name
-            th Topic
-            th Jurisdiction
-            th Size
-        tbody
-          - config[:all_datasets].each do |dataset|
-            tr
-              td
-                div.name => link_to dataset.title, dataset.url
-                div.description => dataset.deck
-              td => link_to_tag dataset.primary_topic
-              td => link_to_tag dataset.jurisdiction
-              td => link_to_tag dataset.data_size
+              - if d.image.present?
+                div.col-sm-4
+                  a href="#{{d.image.url}}"
+                    div.imgwrap
+                      img src="#{{d.image.src}}"
 
+                      div.caption => d.image.caption

@@ -9,3 +9,21 @@
 @import "pages/banner";
 @import "pages/searchbox";
 @import "pages/visualizations";
+
+
+.data_listings{
+  .title{ margin-bottom: 0.1em; margin-top: 0; }
+  .source{ font-weight: bold; }
+
+  .data_listing{
+    margin: 1.5em 0em;
+
+    .caption{
+      font-size: 10px;
+      padding: 5px 5px 5px 5px;
+      line-height: 1.0em;
+    }
+  }
+
+
+}

@@ -1,0 +1,503 @@
+---
+- title: Fuel Economy Data
+  slug: doe-fuel-economy-data
+  source:
+    primary: U.S. Department of Energy
+    sub: U.S. EPA National Vehicle and Fuel Emissions Laboratory
+  description: |
+    Contains data files and reports of fuel economy evaluations, in CSV and XML files. Fuel economy data are the result of vehicle testing done by the EPA in Ann Arbor, Michigan, and by vehicle manufacturers with oversight by EPA.
+  links:
+  - name: Official data direct link
+    url: http://www.fueleconomy.gov/feg/download.shtml
+  image:
+    src: /files/images/data_listings/fueleconomy-fuel-cost-ranges-for-vehicle-classes.png
+    url: http://www.fueleconomy.gov/feg/pdfs/guides/FEG2014.pdf
+    caption: "Annual fuel cost ranges for vehicle classes, via the 2014 Fuel Economy Guide"
+
+- title: Total Consumption of Petroleum Products
+  slug: eia-total-consumption-of-petroleum-products
+  source:
+    primary: U.S. Energy Information Administration
+    sub: Indpendent Statistics and Analysis
+  description: |
+    See this link for a detailed description of what data is available. Includes data on petroleum, natural gas, coal and electricity
+  links:
+  - name: Official URL
+    url: "http://www.eia.gov/cfapps/ipdbproject/iedindex3.cfm?tid=50&pid=54&aid=2&cid=&syid=1973&eyid=2014&freq=M&unit=TBPD"
+- title: "Petroleum, Weekly Supply Estimates"
+  slug: eia-petroleum-weekly-supply-estimates
+  source:
+    primary: U.S. Energy Information Administration
+    sub: Indpendent Statistics and Analysis
+  description: |
+    Find statistics on crude oil, gasoline, diesel, propane, jet fuel, ethanol, and other liquid fuels.
+  links:
+  - name: Official URL
+    url: http://www.eia.gov/dnav/pet/pet_sum_sndw_dcus_nus_w.htm
+- title: Annual Urban Mobility Report
+  slug: texas-am-annual-urban-mobility-report
+  source:
+    primary: "Texas A&M University"
+    sub: Transportation Institute
+  description: A nationwide study with congestion metrics for nearly 500 American populated areas.
+  links:
+  - name: Official URL
+    url: http://mobility.tamu.edu/ums/
+  - name: Official Data Portal
+    url: http://mobility.tamu.edu/ums/congestion-data/
+  - name: Official data direct link
+    url: http://tti.tamu.edu/documents/ums/congestion-data/complete-data.xls
+- title: Licensed Facilities by NY DMV
+  slug: new-york-licensed-facilities-by-ny-dmv
+  source:
+    primary: New York City
+    sub: Department of Motor Vehicles
+  description: Data set containing information on the facilities licensed by DMV in accordance with Vehicle and Traffic Law.
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Facilities-Licensed-by-the-Department-of-Motor-Veh/nhjr-rpi2
+- title: "Vehicle, Snowmobile, and Boat Registrations"
+  slug: new-york-vehicle-snowmobile-and-boat-registrations
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: "Vehicles by make, model, and year, and city of registrant in New York."
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Vehicle-Snowmobile-and-Boat-Registrations/w4pv-hbkt
+- title: 'Motor Vehicle Crashes - Case Information: Beginning 2009'
+  slug: new-york-motor-vehicle-crashes-case-information-beginning-2009
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: "Attributes about each crash case which may consist of a single or multiple reports occurring during the year."
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Motor-Vehicle-Crashes-Case-Information-Beginning-2/e8ky-4vqe
+
+- title: "Driver Documents, DMV issued"
+  slug: new-york-driver-documents-dmv-issued
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: "Driver License, Permit, and Non-Driver Identification Cards Issued by County, Age, and Gender, beginning 2009"
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Driver-License-Permit-and-Non-Driver-Identificatio/rsxa-xf6b
+- title: 'Motor Vehicle Crashes - Violation Information: Beginning 2009'
+  slug: new-york-motor-vehicle-crashes-violation-information-beginning-2009
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: Attributes about each violation citation issued at the scene of the motor vehicle crash reported to NYS DMV
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Motor-Vehicle-Crashes-Violation-Information-Beginn/abfj-y7uq
+- title: 'Motor Vehicle Crashes - Individual Information: Beginning 2009'
+  slug: new-york-motor-vehicle-crashes-individual-information-beginning-2009
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: Attributes about each individual involved in a crash as reported to NYS DMV
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Motor-Vehicle-Crashes-Individual-Information-Begin/ir4y-sesj
+- title: 'Motor Vehicle Crashes - Vehicle Information: Beginning 2009'
+  slug: new-york-motor-vehicle-crashes-vehicle-information-beginning-2009
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: Attributes about each vehicle involved in a crash as reported to NYS DMV
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Motor-Vehicle-Crashes-Vehicle-Information-Beginnin/xe9x-a24f
+- title: Traffic tickets issued since 2008
+  slug: new-york-traffic-tickets-issued-since-2008
+  source:
+    primary: New York
+    sub: Department of Motor Vehicles
+  description: "Records for every traffic ticket issue, including agency, age and gender of driver, and violation type"
+  links:
+  - name: Official data direct link
+    url: https://data.ny.gov/Transportation/Traffic-Tickets-Issued-Beginning-2008/q4hy-kbtf
+- title: Massachusetts Vehicle Census
+  slug: massdot-massachusetts-vehicle-census
+  source:
+    primary: Massachusetts
+    sub: Department of Transportation
+  description: |
+    Anonymized information about the age, model, estimated mileage, fuel, efficiency, and zip code of passenger and commercial vehicles registered in the
+      state from 2008 to 2011
+  links:
+  - name: Official data direct link
+    url: http://www.37billionmilechallenge.org
+- title: Real-time Traffic Speed Data
+  slug: nycdot-real-time-traffic-speed-data
+  source:
+    primary: New York City
+    sub: Department of Transportation
+  description: |
+    This data feed contains 'real-time' traffic information from locations
+    where NYCDOT picks up sensor feeds within the five boroughs, mostly on major arterials
+    and highways.
+  links:
+  - name: Official Data Portal
+    url: https://nycopendata.socrata.com/Transportation/Real-Time-Traffic-Speed-Data/xsat-x5sa
+  - name: Official data direct link
+    url: http://207.251.86.229/nyc-links-cams/LinkSpeedQuery.txt
+- title: Parking Meter Data
+  slug: san-francisco-parking-meter-data
+  source:
+    primary: San Francisco
+    sub: Municpal Transportation Agency
+  description: |
+    Parking meters owned by the SFMTA and the Port of San Francisco as
+    of April 2013, includes locations of meters; meter characteristics, such as single-space
+    or multi-space meter and smart meter status.
+  links:
+  - name: Official data direct link
+    url: https://data.sfgov.org/Transportation/Parking-meters/7egw-qt89
+- title: Traffic Calming Point Features
+  slug: san-francisco-traffic-calming-point-features
+  source:
+    primary: San Francisco Municpal Transportation Agency
+  description: This shapefile contains information about the locations of traffic calming point features in the City and County of San Francisco.
+  links:
+  - name: Official data direct link
+    url: https://data.sfgov.org/Transportation/Traffic-Calming-Point-Features/ddye-rism
+- title: Chicago Traffic Tracker
+  slug: chicago-chicago-traffic-tracker
+  source:
+    primary: Chicago Transit Authority
+  description: |
+    Estimates traffic congestion in Chicago in real-time by continuously
+    monitoring and analyzing GPS traces received from Chicago Transit Authority (CTA)
+    buses every 10 minutes. Congestion is represented by speed in miles per hour.
+  links:
+  - name: Official data direct link
+    url: https://data.cityofchicago.org/Transportation/Chicago-Traffic-Tracker-Congestion-Estimates-by-Re/t2qc-9pjd
+
+- title: Vehicle Classification Counts
+  slug: nyc-vehicle-classification-counts
+  source:
+    primary: New York City
+    sub: Department of Transportation
+  description: |
+    Vehicle classification counts collected by DOT for New York Metropolitan
+    Transportation Council (NYMTC). Classifications include auto, taxi, commercial,
+    trucks, and buses.
+  links:
+  - name: Official data direct link
+    url: https://data.cityofnewyork.us/NYC-BigApps/Vehicle-Classification-Counts-2012-2013-/ae5u-upr6?
+- title: "Chicago Points Traffic Count, 2006"
+  slug: chicago-chicago-points-traffic-count-2006
+  source:
+    primary: Chicago Department of Transportation
+  description: |
+    An approximation to the actual number of vehicles passing through a
+    given location on an average weekday. Sample counts are taken along larger streets
+    to get an estimate of traffic on half-mile or one-mile street segments. 2006 data.
+    Data collected every 10 years.
+  links:
+  - name: Official Data Portal
+    url: https://data.cityofchicago.org/Transportation/Average-Daily-Traffic-Counts/pfsx-4n4m
+
+- title: Buses Involved in Fatal Accidents
+  slug: cmisst-buses-involved-in-fatal-accidents
+  source:
+    primary: Center for the Management of Information for Safe and Sustainable Transportation
+
+  description: |
+    Annual compilations of fatal traffic accidents involving buses. The records are extracted from the Fatality Analysis Reporting System, and contain virtually all the variables from the FARS files at the Accident, Vehicle, and Person data files. In addition, the BIFA data includes information about the vehicle, company, and driver, as collected through a survey process.
+
+    Zip files are provided for 1999 to 2010.
+  links:
+  - name: Official Data Portal
+    url: http://www.cmisst.org/bifa/
+
+- title: Trucks Involved in Fatal Accidents
+  slug: cmisst-trucks-involved-in-fatal-accidents
+  source:
+    primary: Center for the Management of Information for Safe and Sustainable Transportation
+
+  description: |
+    Annual compilations of fatal traffic accidents involving medium or heavy trucks. The records are extracted from the Fatality Analysis Reporting System, and contain virtually all the variables from the FARS files at the Accident, Vehicle, and Person data files. In addition, the BIFA data includes information about the vehicle, company, and driver, as collected through a survey process.
+
+    Zip files are provided for 2000 to 2010.
+  links:
+  - name: Official Data Portal
+    url: http://www.cmisst.org/tifa/
+
+
+- title: APTA Public Transportation Data
+  slug: apta-public-transportation-data
+  source:
+    primary: American Public Transportation Association
+    sub:
+  description: |
+    A data portal with a compilation of industry and government-sourced statistics, inluding public transportation ridership
+  links:
+  - name: Official Data Portal
+    url: http://www.apta.com/resources/statistics/Pages/default.aspx
+
+
+- title: San Francisco Muni Schedule Data
+  slug: san-francisco-san-francisco-muni-schedule-data
+  source:
+    primary: San Francisco Municipal Transportation Agency
+  description: SFMTA transit stop and schedule data available in the General Transit Feed Specification (GTFS) format.
+  links:
+  - name: Official Data Portal
+    url: https://data.sfgov.org/Transportation/SFMTA-Transit-Stop-and-Schedule-Data-GTFS-format-/2qyp-77cq
+- title: San Francisco Speed Limits by Street Segment
+  slug: san-francisco-san-francisco-speed-limits-by-street-segment
+  source:
+    primary: San Francisco Municipal Transportation Agency
+  description: |
+    Records speed limits by street segment. Speed limits are indicated primarily for streets that have speeds higher than 25 MPH.
+  links:
+  - name: Official Data Portal
+    url: https://data.sfgov.org/Transportation/SFMTA-DPT-Speed-Limits-by-Street-Segment-Zipped-Sh/xjmx-586c
+- title: New York Open Transportation Data Portal
+  slug: city-of-new-york-new-york-open-data-portal
+  source:
+    primary: City of New York
+    sub:
+  description: The transportation portal for New York City open data.
+  links:
+  - name: Official Data Portal
+    url: https://nycopendata.socrata.com/data?cat=transportation&type=
+- title: Edmunds Data Center
+  slug: edmunds-edmunds-data-center
+  source:
+    primary: Edmunds
+    sub:
+  description: |
+    Edmunds.com provides data on auto sales, monthly fuel costs, market
+    share, recalls, complaints, and consumer information.
+  links:
+  - name: Official Data Portal
+    url: http://www.edmunds.com/industry-center/data/
+- title: Commuting (Journey to work)
+  slug: census-bureau-commuting-journey-to-work
+  source:
+    primary: Census Bureau
+    sub:
+  description: |
+    A worker’s travel from home to work. Data are available from the American Community Survey (ACS), Decennial Census (2000 and prior), Survey of Income and Program Participation (SIPP), and the American Housing Survey (AHS).
+  links:
+  - name: Official Data Portal
+    url: http://www.census.gov/hhes/commuting/data/commuting.html
+
+- title: Border Crossing/Entry Data
+  slug: dot-border-crossingentry-data
+  source:
+    primary: U.S. Department of Transportation
+    sub: Bureau of Transportation Statistics
+  description: National border-crossing statistics from 1995-2014. Downloadable in CSV form
+  links:
+  - name: Official Data Portal
+    url: http://transborder.bts.gov/programs/international/transborder/TBDR_BC/TBDR_BCQ.html
+
+- title: National Household Travel Survey
+  slug: dot-national-household-travel-survey
+  source:
+    primary: U.S. Department of Transportation
+    sub: Federal Highway Administration
+  description: |
+    The National Household Travel Survey is conducted by the U.S. DOT and Federal Highway Administration to collect data on both long-distance and local travel by the American public
+
+    This survey focuses on long-distance and local travel by the American public, including data such as mode of transportation, duration, distance and purpose of trip. Most recent data is from 2009.
+
+  links:
+  - name: Official Data Portal
+    url: http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/subject_areas/national_household_travel_survey/index.html
+- title: National Automobile Dealers Association Data
+  slug: nada-national-automobile-dealers-association-data
+  source:
+    primary: NADA
+    sub:
+  description: |
+    Annual financial report of new car dealerships in the U.S. Available in PDF form.
+  links:
+  - name: Official Data Portal
+    url: http://www.nada.org/NR/rdonlyres/DF6547D8-C037-4D2E-BD77-A730EBC830EB/0/NADA_Data_2014_05282014.pdf
+
+- title: Highway Statistics Series
+  slug: fhwa-highway-statistics-series
+  source:
+    primary: Federal Highway Administration
+    sub: Office of Highway Policy Information
+  description: |
+    The Highway Statistics Series consists of annual reports containing analyzed statistical information
+    on motor fuel, motor vehicle registrations, driver licenses, highway user taxation,
+    highway mileage, travel, and highway finance.
+  links:
+  - name: Official Data Portal
+    url: http://www.fhwa.dot.gov/policyinformation/statistics.cfm
+- title: Volt Stats
+  slug: chevy-volt-stats
+  source:
+    primary: voltstats.net
+    sub:
+  description: |
+    Volt Stats collects OnStar data voluntarily submitted by Chevy Volt drivers, including miles traveled and miles per gallon.
+  image:
+    src: '/files/images/data_listings/chevy-volt-histogram.png'
+    caption: A histogram of daily driving from Volt Stats
+    url: "http://www.voltstats.net/#dailyTab"
+
+  links:
+  - name: Official URL
+    url: http://www.voltstats.net/
+  - name: Official Data Portal
+    url: http://www.voltstats.net/
+
+- title: Fuel Economy Testing Data - Car List
+  slug: epa-fuel-economy-testing-data-car-list
+  source:
+    primary: EPA
+    sub:
+  description: |
+    CSV data files containing descriptions of vehicles used for fuel economy
+    testing.
+  links:
+  - name: Official Data Portal
+    url: http://www.epa.gov/oms/tcldata.htm
+  - name: Official documentation
+    url: http://www.epa.gov/fueleconomy/testcars/database/test-car-list-definitions.pdf
+
+- title: Transportation Energy Data Book
+  slug: doe-transportation-energy-data-book
+  source:
+    primary: U.S. Department of Energy
+    sub: Oak Ridge National Laboratory
+  description: |
+    A compendium of data on transportation with an emphasis on energy. First published in 1976, the Transportation Energy Data Book is produced by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy. Data available in PDF or XLS
+  links:
+  - name: Official Data Portal
+    url: http://cta.ornl.gov/data/index.shtml
+
+  image:
+    src: '/files/images/data_listings/reformulated-gasoline-map.png'
+    url: http://cta.ornl.gov/data/download33.shtml
+    caption: "A map of where reformulated gasoline is sold (Edition 33, Appendix C)"
+
+- title: "Alternative Fuels Data Center"
+  slug: doe-alternative-fueling-vehicle-data
+  source:
+    primary: U.S. Department of Energy
+    sub: Energy Efficency and Renewable Energy
+  description: |
+    Find maps and charts showing transportation data and trends related
+    to alternative fuels and vehicles.
+  image:
+    src: /files/images/data_listings/alternative-fuel-vehicles-in-use.png
+    caption: Bar chart of Altenrative Fuel Vehicles in Use
+    url: http://www.afdc.energy.gov/data/10300
+  links:
+  - name: Official Data Portal
+    url: http://www.afdc.energy.gov/data/
+
+
+- title: "Automotive Industry: Employment, Earnings, and Hours"
+  slug: bls-auto-industry-labor-statistics
+  source:
+    primary: Bureau of Labor Statistics
+  image:
+    src: /files/images/data_listings/bls-automotive-industry-dealers.png
+    url: http://data.bls.gov/timeseries/CES4244110001?data_tool=XGtable
+    caption: Line graph Automobile dealers employed (thousands)
+  description: |
+    Labor statistics (employment, earnings and hours) provided in the
+    automotive industry, including industries associated with the
+    production, wholesaling, retailing, and maintenance of motor vehicles. The BLS site also includes interactive graphs.
+  links:
+  - name: Official Data Portal
+    url: http://www.bls.gov/iag/tgs/iagauto.htm
+
+- title: NHTSA Civil Penalties Payments
+  slug: nhtsa-civil-penalties-payments
+  source:
+    primary: National Highway Traffic Safety Administration
+  description: 'An API for listing all Civil Penalties payments collected by NHTSA, exclusive of penalties for exceeding Corporate Average Fuel Economy (CAFE) levels'
+  links:
+  - name: Official Data Portal
+    url: http://www.nhtsa.gov/webapi/Default.aspx?CivilPenalties/API/251
+
+- title: Child Safety Seat Inspection Stations
+  slug: nhtsa-child-safety-seat-inspection-stations
+  source:
+    primary: National Highway Traffic Safety Administration
+  description: |
+    This API for the NHTSA's Child Safety Seat Inspection Station Locator. Get data by zip code, state, or geo location.
+  links:
+  - name: Official Data Portal
+    url: http://www.nhtsa.gov/webapi/Default.aspx?CSSIStations/API/80
+
+
+- title: California State Highway System Traffic Volumes
+  slug: ca-dot-california-state-highway-system-traffic-volumes
+  source:
+    primary: California Department of Transportation
+  description: Annual and monthly traffic counts/volume for all CA state highways.
+  links:
+  - name: Official Data Portal
+    url: http://www.dot.ca.gov/hq/traffops/saferesr/trafdata/
+- title: U.S. Toll Facilities
+  slug: dot-us-toll-facilities
+  source:
+    primary: U.S. Department of Transportation
+    sub:
+  description: |
+    "Data regarding toll facilities in the U.S. including bridges, roads,
+        tunnels and ferries. Information includes location, length of bridge, toll fee,
+        and some mileage data."
+  links:
+  - name: Official Data Portal
+    url: http://www.fhwa.dot.gov/policyinformation/tollpage/
+- title: California Bay Area Commute Flows
+  slug: bay-area-census-california-bay-area-commute-flows
+  source:
+    primary: Bay Area Census
+  description: |
+    This census uses American Community Survey data to highlight transportation
+    trends in the SF Bay Area.
+  links:
+  - name: Official Data Portal
+    url: http://www.bayareacensus.ca.gov/transportation.htm
+- title: Bus Company Safety
+  slug: dot-bus-company-safety
+  source:
+    primary: U.S. Department of Transportation
+  description: |
+    This API makes available the safety performance data of DOT registered
+    bus companies.
+  links:
+  - name: Official Data Portal
+    url: https://mobile.fmcsa.dot.gov/developer/apidoc.page?cid=9020
+- title: National Transportation Statistics (portal)
+  slug: dot-national-transportation-statistics-portal
+  source:
+    primary: U.S. Department of Transportation
+  description: |
+    Presents statistics on the U.S. transportation system, including its
+    physical components, safety record, economic performance, the human and natural
+    environment, and national security.
+  links:
+  - name: Official Data Portal
+    url: http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_statistics/index.html
+- title: "Highway-Transit Conditions & Performance Report"
+  slug: fhwa-highway-transit-conditions-performance-report
+  source:
+    primary: Federal Highway Administration
+  description: |
+    A report on the physical conditions, operational performances, and
+    financing mechanisms of highways, bridges, and transit systems, based on data
+    acquired from the American Recovery and Reinvestment Act of 2009
+  links:
+  - name: Official Data Portal
+    url: http://www.fhwa.dot.gov/policy/2013cpr/
+
+
+
