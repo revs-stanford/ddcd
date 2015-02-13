@@ -11,51 +11,10 @@ div id="landing-page"
       h1.title Database of Car Data
       p Explore hand-curated lists of transportation-related datasets and sample visualizations to use as a launchpad for data-driven transportation stories in your newsroom.
 
-      ul.list-inline
-        li Quick links for prototype:
-        li => link_to 'Github repo', 'https://github.com/revs-stanford/ddcd'
-        li => link_to 'Data page prototype', '/datasets/nhtsa_complaints'
 
-      div.searchbox
-        select data-placeholder="Type in a search term..." class="chosen-select"
-          option value=""
-          / BAD DAN TODO
-          - config[:all_datasets].each do |d|
-            option value="#{{d.url}}" #{{d.title}}
+  / We'll use this
+  / section.sec.visualizations.viz-isotope
+  /   - config[:all_visualizations].shuffle[0..8].each_with_index do |viz, idx|
+  /     div.visualization.square.item style="width: #{{[20,30,20,30,20,20,20,20,20][idx]}}%;"
+  /       div => link_to image_tag(viz.image_url), viz.url
 
-  section.sec.visualizations.viz-isotope
-    - config[:all_visualizations].shuffle[0..8].each_with_index do |viz, idx|
-      div.visualization.square.item style="width: #{{[20,30,20,30,20,20,20,20,20][idx]}}%;"
-        div => link_to image_tag(viz.image_url), viz.url
-
-    div style="clear:both;"
-
-  / god this is so hacky
-  section.sec.categories
-    div.container
-      h2 Categories
-      p Topics include car safety, accident statistics, status of bridge integrity, air quality and more.
-
-      / - config[:categorizer].categories.each_pair do |cat_groupname, cat_names|
-      /     h4 => cat_groupname
-      /     ul.list-inline
-      /       - cat_names.each do |tag|
-      /         li
-      /           => link_to_tag tag
-      /           - datasets = config[:categorizer].items_tagged_as(tag)
-      /           span.count => "(#{datasets.count})"
-
-  section.sec
-    div.container
-
-      ul.large-icons style="font-size: 2.0em;"
-        li class="fa fa-github"
-        li class="fa fa-institution"
-        li class="fa fa-location-arrow"
-        li class="fa fa-map-marker"
-        li class="fa fa-gears"
-        li class="fa fa-area-chart"
-        li class="fa fa-line-chart"
-        li class="fa fa-flag"
-        li class="fa fa-sun-o"
-        li class="fa fa-leaf"

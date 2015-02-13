@@ -11,3 +11,10 @@ links:
 - name: Official Data Portal
   url: http://www.epa.gov/airdata/ad_data.html
 ---
+
+
+
+The daily summary data is the only source of Air Quality Index:
+
+http://airnow.gov/index.cfm?action=aqibasics.aqi
+http://www.epa.gov/airdata/ad_rep_aqi.html

@@ -1,15 +1,18 @@
 ---
 title: NYC Taxi 2008 to 2013 Redacted Dataset
+
+---
+
+
 description: |
   Description TOK Fun Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fugit, a asperiores cum omnis magni sunt consectetur unde alias in obcaecati odit magnam dicta enim vero illum. Itaque, praesentium aut?
-
 source:
   primary: National Highway Traffic Safety Administration
   sub: Office of Defect Investigations
 
 visualizations:
   - title: Ocks Lorem Hexabins
-        image_url: 'ocks-dynamic-hexabin.png'
+    image_url: 'ocks-dynamic-hexabin.png'
     description: |
       Hexabin from ocks org http://bl.ocks.org/mbostock/7833311    
   - title: "So, where's my taxi?"
@@ -20,10 +23,7 @@ visualizations:
       name: NYC Taxi Viz
       url: http://www.nyctaxiviz.com/for-riders.html
 
-
----
-
-
+      
 ### Origin of the dataset
 
 The Taxi & Limousine Commission will provide data upon request. [See Chris Whong](http://chriswhong.com/open-data/foil_nyc_taxi/).

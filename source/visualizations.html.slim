@@ -12,13 +12,13 @@ div id="visualizations-page"
       h1.title Visualizations
       p Samples to show the potential for how transportation data can be visualized.
 
-  section.sec.visualizations
-    div.container
-      div.row
-        - config[:all_visualizations].each do |v|
-          div.col-sm-4
-            div.visualization.box
-            div.imgwrap
-              => link_to image_tag( v.image_url), v.url
+  / section.sec.visualizations
+  /   div.container
+  /     div.row
+  /       - config[:all_visualizations].each do |v|
+  /         div.col-sm-4
+  /           div.visualization.box
+  /           div.imgwrap
+  /             => link_to image_tag( v.image_url), v.url
 
-            div.title => link_to v.title, v.url
+  /           div.title => link_to v.title, v.url
