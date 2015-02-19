@@ -17,7 +17,7 @@ set :markdown, :layout_engine => :slim,
 set :site_title, 'Data Driven'
 set :site_description, "REVS/Stanford/Stanford Journalism Data Driven conference"
 set :typekit_id, 'bwq4gyt' #'deu1taf'
-# set :google_analytics_id, 'UA-55019978-1'
+set :google_analytics_id, 'UA-59942940-1'
 
 
 # Slim configuration

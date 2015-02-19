@@ -1,8 +1,35 @@
 
 
 div.container
-  h2 Featured Listings
 
 
   div.listing
-    h3 => link_to "The National Bridge Inventory database", '/features/national-bridge-inventory-tableau/'
+    h3 => link_to "New York Taxi Data", '/features/nyc-taxi-data/'
+    div.row
+      div.col-sm-8
+        p This dataset includes more than 850,000,000 New York cab rides spanning from 2008 to 2013. The data includes details such as where each taxi picked up and dropped off their customers, how long the ride lasted, and how much the cabbie was tipped.
+      div.col-sm-4
+        div.imgwrap
+          img src="/files/images/features/hurricane-sandy-taxi.png"
+
+
+
+  div.listing
+    h3 => link_to 'NHTSA 5-STar Ratings', '/features/nhtsa-safety-ratings'
+    div.row
+      div.col-sm-8
+        p This dataset of the vehicles tested under NHTSA's 5-star rating system includes their performance, as well as video and photo footage of the crash tests.
+      div.col-sm-4
+        div.imgwrap
+          img src="/files/images/features/front-rating-4.jpg"
+
+
+  div.listing
+    h3 => link_to "The National Bridge Inventory", '/features/national-bridge-inventory-tableau/'
+    div.row
+      div.col-sm-8
+        p This Federal Highway Administration database lists structural evaluations and codes for all bridges in the U.S. For the most recent year, 2013, the data includes only highway bridges*. In previous years, it includes bridges on highways, railroads, pedestrian-bicycle bridges, overpasses and those designated as historically significant
+      div.col-sm-4
+        div.imgwrap
+          img src="/files/images/features/bridge-tableau.png"
+
