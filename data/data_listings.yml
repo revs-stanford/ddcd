@@ -1,5 +1,5 @@
 ---
-- title: Revs Program Vehicle Dynamics Database
+- title: REVS Program Vehicle Dynamics Database
   slug: revs-program-vehicle-dynamics-database
   source:
     primary: REVS Program
@@ -12,8 +12,6 @@
       url: https://purl.stanford.edu/tt103jr6546
     - name: 2014 Targa Sixty-Six
       url: https://purl.stanford.edu/hd122pw0365
-
-
 
 
 - title: Fuel Economy Data
