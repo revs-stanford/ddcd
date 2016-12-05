@@ -1,4 +1,21 @@
 ---
+- title: Revs Program Vehicle Dynamics Database
+  slug: revs-program-vehicle-dynamics-database
+  source:
+    primary: REVS Program
+  description: |
+    Multimedia collection of vehicle data collected as part of the Revs Program Vehicle Dynamics Database from the 2013 Targa Sixty-Six at Palm Beach International Raceway; 2013 Monterey Motorsports Reunion and 2014 Targa Sixty-six.
+  links:
+    - name: 2013 Targa Sixty-Six
+      url: https://purl.stanford.edu/yf219gg2055
+    - name: 2013 Monterey Motorsports Reunion
+      url: https://purl.stanford.edu/tt103jr6546
+    - name: 2014 Targa Sixty-Six
+      url: https://purl.stanford.edu/hd122pw0365
+
+
+
+
 - title: Fuel Economy Data
   slug: doe-fuel-economy-data
   source:

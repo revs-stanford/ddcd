@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
-gem "middleman", "~>3.3.7"
-gem "middleman-livereload", "~> 3.3"
+gem "middleman", "~>3.3.10"
+gem "middleman-livereload"
 gem "middleman-blog"
-gem 'middleman-s3_sync', "=3.0.25"
+gem 'middleman-s3_sync'
 gem 'middleman-smusher'
 gem 'middleman-pry'
 gem 'andand'
